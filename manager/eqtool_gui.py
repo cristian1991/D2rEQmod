@@ -192,7 +192,7 @@ DESCRIPTIONS = {
     "ui-profiles": "UI profile geometry: centered orbs, side panels removed.",
     "ui-sprites": "Custom panel sprite art for HUD, inventory and waypoints.",
     "trav-wall-remove": "Travincal wall removal.",
-    "winged-crown": "Crown of Ages only: Coif of Glory model with blue ice-vfx wings. Other crowns stay vanilla.",
+    "winged-crown": "Crown-family helms (incl. Crown of Ages) as Coif of Glory with blue ice-vfx wings.",
     "waypoint-lights": "Horadric waypoint light beams and automap markers.",
     "core-modinfo": "Mod bootstrap file. Cannot be disabled.",
 }
@@ -1107,13 +1107,33 @@ class H(BaseHTTPRequestHandler):
                 return self._send("failed: {}".format(e),
                                   "text/plain", 500)
         if self.path == "/api/launch":
-            game_dir = os.path.dirname(eqtool.GAME_EXE)
             try:
+                bnet = None
+                for p in (r"C:\Program Files (x86)\Battle.net"
+                          r"\Battle.net.exe",
+                          r"C:\Program Files\Battle.net"
+                          r"\Battle.net.exe"):
+                    if os.path.isfile(p):
+                        bnet = p
+                        break
+                if bnet:
+                    # make sure the launch args are installed, then let
+                    # Battle.net launch with the user's session/region
+                    mode, installed = mod_install_state()
+                    if mode == "bnet" and not installed:
+                        mod_install(True)
+                    subprocess.Popen([bnet, "--exec=launch OSI"])
+                    return self._send(
+                        "Launching D2R through Battle.net "
+                        "(mod args from launcher settings)...",
+                        "text/plain")
+                game_dir = os.path.dirname(eqtool.GAME_EXE)
                 subprocess.Popen(
                     [eqtool.GAME_EXE, "-mod", "eq", "-txt"],
                     cwd=game_dir)
                 return self._send(
-                    "D2R launching with -mod eq -txt ...", "text/plain")
+                    "D2R launching directly with -mod eq -txt ...",
+                    "text/plain")
             except Exception as e:
                 return self._send("launch failed: {}".format(e),
                                   "text/plain", 500)
