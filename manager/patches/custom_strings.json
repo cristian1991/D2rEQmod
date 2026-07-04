@@ -1,0 +1,2911 @@
+{
+ "panel-texts": {
+  "npcs.json": {
+   "hudpanelStr3": {
+    "id": 50001,
+    "Key": "hudpanelStr3",
+    "enUS": "ÿc3Small Charm ÿc0 Max Affix[ÿc9*if multi-affix maxÿc0]\nÿc8Prefixÿc0\nÿc2 res ÿc011\nÿc2 All res ÿc05\nÿc2 Mana ÿc017\nÿc2 Max Dmg ÿc04 [ÿc9*3ÿc0]\nÿc2 AR ÿc036 [ÿc9*20ÿc0]\nÿc8suffixÿc0\nÿc2 FRW ÿc03\nÿc2 FHR ÿc05\nÿc2 Life ÿc020\nÿc2 Mana ÿc017\nÿc2 MF ÿc07\nÿc2ÿc8Poison Damageÿc0(*) ÿc0\n\n[Preferred Charm] ÿc0 5 All res+7 MF / 17 Mana+20 Life\n3 Max Dmg+20 AR+7 MF / 3 Max Dmg+20 AR+10 Gold\n3 Max Dmg+20 AR+20 Life / 4 Max Dmg+36 AR\nÿc4[Poison Damage]ÿc0 100 Poison, 175 Poison, 281 Poison, 313 Poison, 330 Poison, 377 Poison, 451 Poison",
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc2ÿc3작은 부적 ÿc0최대치[ÿc9*복수옵션ÿc0시 최대치] ÿc0\nÿc8접두사ÿc0\nÿc2단일저항 ÿc011\nÿc2모든저항 ÿc05\nÿc2마나 ÿc017\nÿc2최대피해 ÿc04 [ÿc9*3ÿc0]\nÿc2명중률 ÿc036 [ÿc9*20ÿc0]\nÿc2ÿc8접미사ÿc0 ÿc0\nÿc2달리기 ÿc03\nÿc2타격 회복 ÿc05\nÿc2생명력 ÿc020\nÿc2마나 ÿc017\nÿc2금화삥 ÿc010\nÿc2매직찬스 ÿc07\nÿc2ÿc8독피해 ÿc0*하단 참고 ÿc0\n\nÿc4[추천 부적]ÿc0 5모든저항+7매찬 / 17마나+20생명력\n3최대피해+20명중+7매찬 / 3최대피해+20명중+10삥\n3최대피해+20명중+20생명력 / 4최대피해+20명중률\nÿc4[독참]ÿc0 100독, 175독, 281독, 313독, 330독, 377독, 451독",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏"
+   },
+   "hudpanelStr4": {
+    "id": 50002,
+    "Key": "hudpanelStr4",
+    "enUS": "ÿc3Grand Charm ÿc0 Max Affix[ÿc9*if multi-affix maxÿc0]\nÿc8Prefixÿc0\nÿc2Skill ÿc01\nÿc2 Mana ÿc059\nÿc2 Max Dmg ÿc014 [ÿc9*10ÿc0]\nÿc2 AR ÿc0132 [ÿc9*76ÿc0]\nÿc2 res ÿc030\nÿc2 All res ÿc015\nÿc8suffixÿc0\nÿc2 FRW ÿc07\nÿc2 FHR ÿc012\nÿc2 Life ÿc045\nÿc2 GF ÿc040\nÿc4[Preferred Charm]ÿc0 Skill 1+45 Life / ÿc0 45 Life+59 Mana\nÿc0 14 Max Dmg+76 AR / 10 Max Dmg+76 AR+45 Life\nÿc0 15 All res+45 Life / 15 All res+7 FRW / 15 All res+12 FHR\nÿc0 40 Gold+Shout Skill / 40 Gold+132 AR / 40 Gold+10 Max Dmg+76 AR\n40 Gold+30 res / 40 Gold+59 Mana / 40 Gold+100 Def",
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc3거대 부적 ÿc0최대치[ÿc9*복수옵션ÿc0시 최대치] \nÿc8접두사ÿc0\nÿc2스킬강화 ÿc01\nÿc2마나 ÿc059\nÿc2최대피해 ÿc014 [ÿc9*10ÿc0]\nÿc2명중률 ÿc0132 [ÿc9*76ÿc0]\nÿc2단일저항 ÿc030\nÿc2모든저항 ÿc015\nÿc2ÿc8접미사ÿc0 ÿc0\nÿc2달리기 ÿc07\nÿc2타격 회복 ÿc012\nÿc2생명력 ÿc045\nÿc2금화삥 ÿc040\n\nÿc4[추천 부적]ÿc0 ÿc9(스킬피참)ÿc0 1스킬+45생명 / ÿc9(피마나참)ÿc0 45생명력+59마나  \nÿc9(맥어레피참)ÿc0 14최대피해+76명중 / 10최대피해+76명중+45생명\nÿc9(올레지참)ÿc0 15모든저항+45생명 / 15모든저항+7달리기 / 15모든저항+12타격회복\nÿc9(삥참)ÿc0 40삥+함성 / 40삥+132명중 / 40삥+10최대피해+76명중\n40삥+30단일저항 / 40삥+59마나 / 40삥+100방어",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏"
+   },
+   "hudpanelStr5": {
+    "id": 50003,
+    "Key": "hudpanelStr5",
+    "enUS": "ÿc9Rare Ringÿc0 Maximum 6 Affix(3 Prefix + 3 Suffix random)\nÿc4[Preferred Affix]ÿc0 FCR, Str, Dex, life steal, mana steal, res)\n\nÿc8Prefixÿc0\nÿc2 AR ÿc0120\nÿc2Fire res ÿc030\nÿc2Cold res ÿc030\nÿc2Lightning res ÿc030\nÿc2Poison res ÿc030\nÿc2 All res ÿc011\nÿc2 Mana ÿc090\nÿc2 MF ÿc010\n\nÿc8Suffixÿc0\nÿc2 FCR ÿc010\nÿc2half freeze ÿc01/2\nÿc2 Str ÿc020\nÿc2 Dex ÿc015\nÿc2 Vit ÿc040\nÿc2 Eng ÿc015\nÿc2 Max Dmg ÿc04\nÿc2 Min Dmg ÿc09\nÿc2life steal ÿc08\nÿc2mana steal ÿc06\nÿc2 MF ÿc015\nÿc2 GF ÿc040\nÿc2Light Radius 5 + AR 5% ÿc0\nÿc2poison length - 50%",
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc9레어 반지ÿc0는 최대 6옵션(접두3+접미3 무작위)\nÿc4[주요 옵션]ÿc0 시전속도, 힘, 민첩, 생명흡수, 마나흡수, 저항\n\nÿc8접두사ÿc0\nÿc2명중률 ÿc0120\nÿc2화염 저항 ÿc030\nÿc2냉기 저항 ÿc030\nÿc2번개 저항 ÿc030\nÿc2독 저항 ÿc030\nÿc2모든저항 ÿc011\nÿc2마나 ÿc090\nÿc2마법 아이템 확률 ÿc010\n\nÿc8접미사ÿc0\nÿc2시전속도 ÿc010\nÿc2빙결감소 ÿc01/2\nÿc2힘 ÿc020\nÿc2민첩 ÿc015\nÿc2활력 ÿc040\nÿc2마력 ÿc015\nÿc2최대 피해 ÿc04\nÿc2최소 피해 ÿc09\nÿc2생명훔침 ÿc08\nÿc2마나훔침 ÿc06\nÿc2마법 아이템 확률 ÿc015\nÿc2금화삥 ÿc040\nÿc2시야증가5+명중률5% ÿc0\nÿc2독 지속시간 절반으로 감소",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏"
+   },
+   "hudpanelStr6": {
+    "id": 50004,
+    "Key": "hudpanelStr6",
+    "enUS": "ÿc9Rare Amulet ÿc0Maximum 6 Affix(3 Prefix + 3 Suffix random)\nÿc4[Preferred Affix]ÿc0 +Skills, FCR, Str, Dex, life steal, mana steal, res)\n\nÿc2ÿc8Prefixÿc0 ÿc0\nÿc2+Skills ÿc02\nÿc2Fire res ÿc040\nÿc2Cold res ÿc040\nÿc2Lightning res ÿc040\nÿc2Poison res ÿc040\nÿc2 All res ÿc020\nÿc2 Mana ÿc090\nÿc2 MF ÿc010\n\nÿc2ÿc8Suffixÿc0 ÿc0\nÿc2 FCR ÿc010\nÿc2half freeze ÿc0\nÿc2 Str ÿc030\nÿc2 Dex ÿc020\nÿc2 Vit ÿc060\nÿc2 Eng ÿc020\nÿc2life steal ÿc06\nÿc2mana steal ÿc08\nÿc2 MF ÿc025\nÿc2 GF ÿc080\nÿc2poison length - 75%",
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc9레어 목걸이ÿc0는 최대 6옵션(접두3+접미3 무작위)\nÿc4[주요 옵션]ÿc0 스킬,시전속도, 힘, 민첩, 생명흡수, 마나흡수, 저항\n\nÿc8접두사ÿc0\nÿc2캐릭별 스킬 ÿc02\nÿc2화염저항 ÿc040\nÿc2냉기저항 ÿc040\nÿc2번개저항 ÿc040\nÿc2독저항 ÿc040\nÿc2모든저항 ÿc020\nÿc2마나 ÿc090\nÿc2마법 아이템 확률 ÿc010\n\nÿc8접미사ÿc0\nÿc2시전속도 ÿc010\nÿc2결빙감소1/2 ÿc0\nÿc2힘 ÿc030\nÿc2민첩 ÿc020\nÿc2활력 ÿc060\nÿc2마력 ÿc020\nÿc2생명훔침 ÿc06\nÿc2마력훔침 ÿc08\nÿc2마법 아이템 확률 ÿc025\nÿc2금화삥 ÿc080\nÿc2독 지속시간 감소 75%",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏"
+   },
+   "hudpanelStr7": {
+    "id": 50005,
+    "Key": "hudpanelStr7",
+    "enUS": "ÿc0ÿc4[Armor Info] ÿc1#Str ÿc2Socket ÿc3 Defÿc0[min-max ÿc9Ethereal min-maxÿc0]\nÿc0Mage Plate ÿc1#55 ÿc2Socket3 ÿc3 Defÿc0[225-261ÿc9E337-391ÿc0]\nÿc0Boneweave ÿc1#158 ÿc2Socket4 ÿc3 Defÿc0[399-505ÿc9E598-757ÿc0]\nÿc0Dusk Shroud ÿc1#77 ÿc2Socket4 ÿc3 Defÿc0[361-467ÿc9E541-700ÿc0]\nÿc0Wyrmhide ÿc1#84 ÿc2Socket4 ÿc3 Defÿc0[364-470ÿc9E546-705ÿc0]\nÿc0Scarab Husk ÿc1#95 ÿc2Socket4 ÿc3 Defÿc0[369-474ÿc9E553-711ÿc0]\nÿc0Wire Fleece ÿc1#111 ÿc2Socket4 ÿc3 Defÿc0[375-481ÿc9E562-721ÿc0]\nÿc0Diamond Mail ÿc1#131 ÿc2Socket4 ÿc3 Defÿc0[383-489ÿc9E574-733ÿc0]\nÿc0Loricated Mail ÿc1#149 ÿc2Socket4 ÿc3 Defÿc0[390-496ÿc9E585-744ÿc0]\nÿc0Great Hauberk ÿc1#118 ÿc2Socket4 ÿc3 Defÿc0[395-501ÿc9E592-751ÿc0]\nÿc0Balrog Skin ÿc1#165 ÿc2Socket4 ÿc3 Defÿc0[410-517ÿc9E615-775ÿc0]\nÿc0Hellforge Plate ÿc1#196 ÿc2Socket4 ÿc3 Defÿc0[421-530ÿc9E631-795ÿc0]\nÿc0Kraken Shell  ÿc1#174 ÿc2Socket4 ÿc3 Defÿc0[417-523ÿc9E625-784ÿc0]\nÿc0Lacquered Plate ÿc1#208 ÿc2Socket4 ÿc3 Defÿc0[433-541ÿc9E649-811ÿc0]\nÿc0Archon Plate ÿc1#103 ÿc2Socket4 ÿc3 Defÿc0[410-524ÿc9E615-786ÿc0]\nÿc0Shadow Plate ÿc1#230 ÿc2Socket4 ÿc3 Defÿc0[446-557ÿc9E669-835ÿc0]\nÿc0Sacred Armor ÿc1#232 ÿc2Socket4 ÿc3 Defÿc0[487-600ÿc9E730-900ÿc0]\nÿc0*Ethereal, Str requirement reduced(-10)",
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc0ÿc4[방어구 정보] ÿc1#힘제한 ÿc2소켓정보 ÿc3방어력ÿc0[최소-최대 ÿc9무형일때 최소-최대ÿc0]\nÿc0메이지 플레이트 ÿc1#55 ÿc2소켓3 ÿc3방ÿc0[225-261ÿc9E337-391ÿc0]\nÿc0본위브 ÿc1#158 ÿc2소켓4 ÿc3방ÿc0[399-505ÿc9E598-757ÿc0]\nÿc0더스크 슈라우드 ÿc1#77 ÿc2소켓4 ÿc3방ÿc0[361-467ÿc9E541-700ÿc0]\nÿc0웜하이드 ÿc1#84 ÿc2소켓4 ÿc3방ÿc0[364-470ÿc9E546-705ÿc0]\nÿc0스캐럽 허스크 ÿc1#95 ÿc2소켓4 ÿc3방ÿc0[369-474ÿc9E553-711ÿc0]\nÿc0와이어 폴리스 ÿc1#111 ÿc2소켓4 ÿc3방ÿc0[375-481ÿc9E562-721ÿc0]\nÿc0다이아몬드 메일 ÿc1#131 ÿc2소켓4 ÿc3방ÿc0[383-489ÿc9E574-733ÿc0]\nÿc0로러케이티드 메일 ÿc1#149 ÿc2소켓4 ÿc3방ÿc0[390-496ÿc9E585-744ÿc0]\nÿc0그레이트 허버크 ÿc1#118 ÿc2소켓4 ÿc3방ÿc0[395-501ÿc9E592-751ÿc0]\nÿc0발록 스킨 ÿc1#165 ÿc2소켓4 ÿc3방ÿc0[410-517ÿc9E615-775ÿc0]\nÿc0헬포지 플레이트 ÿc1#196 ÿc2소켓4 ÿc3방ÿc0[421-530ÿc9E631-795ÿc0]\nÿc0크라켄 쉘 ÿc1#174 ÿc2소켓4 ÿc3방ÿc0[417-523ÿc9E625-784ÿc0]\nÿc0래커드 플레이트 ÿc1#208 ÿc2소켓4 ÿc3방ÿc0[433-541ÿc9E649-811ÿc0]\nÿc0아콘 플레이트 ÿc1#103 ÿc2소켓4 ÿc3방ÿc0[410-524ÿc9E615-786ÿc0]\nÿc0쉐도우 플레이트 ÿc1#230 ÿc2소켓4 ÿc3방ÿc0[446-557ÿc9E669-835ÿc0]\nÿc0세이크리드 아머 ÿc1#232 ÿc2소켓4 ÿc3방ÿc0[487-600ÿc9E730-900ÿc0]\nÿc0*무형 인 경우 힘제한 낮음(-10)",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏"
+   },
+   "hudpanelStr8": {
+    "id": 50006,
+    "Key": "hudpanelStr8",
+    "enUS": "ÿc1[Sword]\nÿc0Crystal Sword ÿc2[4,5]\nÿc0Phase Blade ÿc2[4,5,6]\nÿc1[Polearms]\nÿc0Colossus Voulge ÿc2[4]\nÿc0Thresher ÿc2[4,5]\nÿc0Cryptic Axe ÿc2[4,5]\nÿc0Great Poleaxe ÿc2[4,5,6]\nÿc0Giant Thresher ÿc2[4,5,6]\nÿc1[Mace/Hammer]\nÿc0Flail ÿc2[4,5]\nÿc0War/Divine/Caduceus ÿc2[5] ÿc9\n*Skill(Holy Shield/Fist of the Heavens/Redemption\n/Concentration/Blessed Hammer/Fanaticism)\nÿc0Thunder Maul ÿc2[6]\nÿc1[Two-hand sword]\nÿc0Zweihander ÿc2[5,6] ÿc8*15 EDmg\nÿc0Colossus Blade ÿc2[5]\nÿc0Balrog Blade ÿc2[4] ÿc5*Ethereal\nÿc0Colossus Sword ÿc2[5] ÿc5*Ethereal\nÿc0Colossus Blade ÿc2[5,6] ÿc5*Ethereal",
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc1[한손검]\nÿc0크리스탈소드  ÿc2[4,5]\nÿc0페이즈블레이드  ÿc2[4,5,6]\nÿc1[폴암] ÿc5*무형 선호\nÿc0콜로서스 불즈 ÿc2[4]\nÿc0쓰레셔 ÿc2[4,5]\nÿc0크립틱 엑스 ÿc2[4,5]\nÿc0그레이트 폴액스 ÿc2[4,5,6]\nÿc0자이언트 쓰레셔 ÿc2[4,5,6]\nÿc1[메이스/해머]\nÿc0프레일 ÿc2[4,5]\nÿc0워 셉터/디바인 셉터/카우세우스 ÿc2[5] ÿc9\n*스킬(신성한 방패/천상의 주먹/속죄\n/집중/축복받은 망치/광신)\nÿc0썬더 마울 ÿc2[6]\nÿc1[양손검]\nÿc0즈바이핸더  ÿc2[5,6] ÿc8*15피해증가\nÿc0콜로서스 블레이드  ÿc2[5]\nÿc0발록 블레이드  ÿc2[4] ÿc5*무형\nÿc0콜로서스 소드  ÿc2[5] ÿc5*무형\nÿc0콜로서스 블레이드  ÿc2[5,6] ÿc5*무형",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏"
+   },
+   "hudpanelStr9": {
+    "id": 50007,
+    "Key": "hudpanelStr9",
+    "enUS": "ÿc1[Helm]\nÿc0Tiara ÿc2[3] ÿc3*15 EDef (sup)\nÿc0Bone Visage ÿc2[3] ÿc3*15 EDef (sup)\nÿc0Diadem ÿc2[3] ÿc3*15 EDef (sup)\nÿc0Grand Crown ÿc2[3] ÿc3*15 EDef (sup)\nÿc0Corona ÿc2[3] ÿc3*15 EDef (sup)\nÿc1[Shield]\nÿc0Monarch ÿc2[3,4]\nÿc0Ward ÿc2[3]\nÿc0Aegis ÿc2[3]\nÿc0Sacred Targe ÿc2[3,4] ÿc9 All res 35+ (Max 45)\nÿc0Sacred Rondache ÿc2[3,4] ÿc9 All res 35+ (Max 45)\nÿc0Zakarum Shield ÿc2[3,4] ÿc9 All res 35+ (Max 45)\nÿc0Vortex Shield ÿc2[3,4] ÿc9 All res 35+ (Max 45)\nÿc0Kurast Shield ÿc2[3,4] ÿc9 All res 35+ (Max 45)",
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc1[헬멧]\nÿc0티아라  ÿc2[3] ÿc3*15방어력상승\nÿc0본 비지즈  ÿc2[3] ÿc3*15방어력상승\nÿc0다이어뎀  ÿc2[3] ÿc3*15방어력상승\nÿc0그랜드크라운  ÿc2[3] ÿc3*15방어력상승\nÿc0코로나 ÿc2[3] ÿc3*15방어력상승\nÿc1[방패]\nÿc0모너크 ÿc2[3,4]\nÿc0워드 ÿc2[3]\nÿc0이지스 ÿc2[3]\nÿc0세이크리드 타아지 ÿc2[3,4] ÿc9모든저항35↑최대45*\nÿc0세이크리드 론다쉬 ÿc2[3,4] ÿc9모든저항35↑최대45*\nÿc0자카룸 쉴드 ÿc2[3,4] ÿc9모든저항35↑최대45*\nÿc0볼텍스 쉴드 ÿc2[3,4] ÿc9모든저항35↑최대45*\nÿc0쿠라스트 쉴드 ÿc2[3,4] ÿc9모든저항35↑최대45*",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏"
+   },
+   "hudpanelStr10": {
+    "id": 50008,
+    "Key": "hudpanelStr10",
+    "enUS": "ÿc3Magic Jewelÿc0 Maximum 2 Affix(Prefix+Suffix)\nÿc9Rare Jewelÿc0 Maximum 4(Prefix1~3+Suffix1~3 Random)\nÿc4Unique Jewelÿc0 Use -5/5 option\n\nÿc8Prefix ÿc3Magic Jewel ÿc9Rare Jewel\nÿc2Max Dmg ÿc315 ÿc99\nÿc2Min Dmg ÿc38 ÿc98\nÿc2EDmg ÿc340 ÿc930\nÿc2AR ÿc3100 ÿc960\nÿc2MF ÿc37 ÿc97\nÿc2res ÿc330 ÿc930\nÿc2All res ÿc315 ÿc910\nÿc2Def ÿc364 ÿc940\nÿc2Dmg to mana ÿc312% ÿc912%\nÿc2Heal Stamina Plus ÿc315 ÿc915\nÿc2Stamina ÿc325 ÿc925\nÿc2Mana after each Kill ÿc33 ÿc93\n\nÿc8Suffix ÿc3Magic Jewel ÿc9Rare Jewel\nÿc25 Thorns DMG ÿc95 Thorns DMG\nÿc2IAS ÿc315 ÿc9(X)\nÿc2Min Dmg ÿc310 ÿc910\nÿc2Max Dmg ÿc37 ÿc97\nÿc2Replenish ÿc34 ÿc94\nÿc2GF ÿc330 ÿc930\nÿc2MF ÿc310 ÿc910\nÿc2Life ÿc320 ÿc98\nÿc2Lv Req ÿc315% ÿc915%\nÿc2Add Str/Defen ÿc39 ÿc99",
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc3매직 주얼ÿc0 최대 2옵션(접두+접미)\nÿc9레어 주얼ÿc0 최대 4옵션(접두1~3+접미1~3 무작위)\nÿc4유니크 주얼ÿc0 -5/5\n\nÿc8접두사 ÿc3매직 주얼 ÿc9레어 주얼\nÿc2최대피해 ÿc315 ÿc99\nÿc2최소피해 ÿc38 ÿc98\nÿc2피해증가 ÿc340 ÿc930\nÿc2명중률 ÿc3100 ÿc960\nÿc2매직찬스 ÿc37 ÿc97\nÿc2단일저항 ÿc330 ÿc930\nÿc2모든저항 ÿc315 ÿc910\nÿc2방어력 ÿc364 ÿc940\nÿc2피해%마나회복 ÿc312% ÿc912%\nÿc2지구력회복 ÿc315 ÿc915\nÿc2지구력 ÿc325 ÿc925\nÿc2처치시 마나 ÿc33 ÿc93\n\nÿc8접미사 ÿc3매직 주얼 ÿc9레어 주얼\nÿc2공격자피해 ÿc35 ÿc95\nÿc2공격속도 ÿc315 ÿc9(X)\nÿc2최소피해 ÿc310 ÿc910\nÿc2최대피해 ÿc315 ÿc99\nÿc2생명재생 ÿc34 ÿc94\nÿc2금화삥 ÿc330 ÿc930\nÿc2매직찬스 ÿc310 ÿc910\nÿc2생명력 ÿc320 ÿc98\nÿc2요구치감소 ÿc315% ÿc915%\nÿc2힘,민첩 ÿc39 ÿc99\n\nÿc4추천 ÿc3매직주얼ÿc0\n40피해증가+15공격속도(지증속주얼)\n40피해증가+15최대피해(지증맥주얼)\n40피해증가+10최소피해(지증민주얼)\n15공격속도+15최대피해(속맥주얼)\n15공격속도+처치시마나3(마상주얼)\n15공격속도+15모든저항\n15공격속도+30화염저항",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏"
+   },
+   "hudpanelStr11": {
+    "id": 50009,
+    "Key": "hudpanelStr11",
+    "enUS": "ÿc1[Axe]\nÿc0Berserker Axe ÿc2[5,6] ÿc8*15 EDmg (sup)\nÿc0Champion Axe ÿc2[5,6]\nÿc1[Bow]\nÿc0Hydra Bow ÿc2[5,6] ÿc8*15 EDmg (sup)\nÿc0Grand Matron Bow ÿc2[4] ÿc9+3 Bow/Crossbow\nÿc9*Skill(Bow and Crossbow +3)\nÿc1[Claw]\nÿc0Feral Claws ÿc2[3]\nÿc0Runic Talons ÿc2[3]\nÿc0Suwayyah ÿc2[3]\nÿc9*Skill(Fade/Venom/Shadow Master/Weapon Block/Mind Blast/\nBlades of Ice/Dragon Flight/Lightning Sentry/Blade Shield/Wake of Inferno)\nÿc1[Dagger]\nÿc0Fanged Knife ÿc2[1,3] ÿc9+3 Dagger Skills\nÿc0Legend Spike ÿc2[1,2] ÿc9+3 Dagger Skills\nÿc0Warlock Dagger ÿc9Not class-locked\nÿc9*Skill(Bind Demon/Blood Boil/Blood Oath/Consume/Engorge/Abyss)\nÿc1[Book]\nÿc0Class Book (Warlock) ÿc2[2]\nÿc9*Skill(Chaos/Demon/Eldritch/All Warlock Skills)",
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc1[도끼]\nÿc0버서커엑스  ÿc2[5,6]\nÿc0워 스파이크  ÿc2[5,6] ÿc5*무형 ÿc8*10피해증가↑\nÿc0글로리어스 엑스  ÿc2[5,6] ÿc5*무형\nÿc1[스피어]\nÿc0고스트 스피어  ÿc2[6] ÿc5*무형\nÿc0워파이크  ÿc2[6] ÿc5*무형\nÿc1[보우]\nÿc0그레이트보우  ÿc2[4] ÿc8*15피해증가\nÿc0히드라 보우  ÿc2[4,6] ÿc8*15피해증가\nÿc0크루세이더보우  ÿc2[4,6] ÿc8*15피해증가\nÿc0메이트리어컬 보우  ÿc2[4] ÿc8*15피해증가/스킬+3\nÿc0그랜드 메이트런 보우  ÿc2[4] ÿc8*15피해증가/스킬+3\nÿc0콜로서스 크로스보우  ÿc2[4,6] ÿc8*15피해증가/3명중률\nÿc1[클러]\nÿc0시저스 수웨이자 ÿc2[3]\nÿc0루닉 탤런 ÿc2[3]\nÿc0페럴 클러 ÿc2[3]\nÿc0수웨이자 ÿc2[3]\nÿc0리스트 소드 ÿc2[3]\n ÿc9*스킬(흐리기/맹독/그림자달인/무기막기/정신폭발/\n얼음칼날/용의비상/번개파수기/칼날방패/지옥불의파동)",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏"
+   },
+   "hudpanelStr12": {
+    "zhTW": "物品",
+    "deDE": "Inventar",
+    "esES": "Inventario",
+    "frFR": "Inventaire",
+    "itIT": "Inventario",
+    "koKR": "ÿc1[도끼]\nÿc0버서커엑스  ÿc2[5,6]\nÿc0워 스파이크  ÿc2[5,6] ÿc5*무형 ÿc8*10피해증가↑\nÿc0글로리어스 엑스  ÿc2[5,6] ÿc5*무형\nÿc1[스피어]\nÿc0고스트 스피어  ÿc2[6] ÿc5*무형\nÿc0워파이크  ÿc2[6] ÿc5*무형\nÿc1[보우]\nÿc0그레이트보우  ÿc2[4] ÿc8*15피해증가\nÿc0히드라 보우  ÿc2[4,6] ÿc8*15피해증가\nÿc0크루세이더보우  ÿc2[4,6] ÿc8*15피해증가\nÿc0메이트리어컬 보우  ÿc2[4] ÿc8*15피해증가/스킬+3\nÿc0그랜드 메이트런 보우  ÿc2[4] ÿc8*15피해증가/스킬+3\nÿc0콜로서스 크로스보우  ÿc2[4,6] ÿc8*15피해증가/3명중률\nÿc1[클러]\nÿc0시저스 수웨이자 ÿc2[3]\nÿc0루닉 탤런 ÿc2[3]\nÿc0페럴 클러 ÿc2[3]\nÿc0수웨이자 ÿc2[3]\nÿc0리스트 소드 ÿc2[3]\n ÿc9*스킬(흐리기/맹독/그림자달인/무기막기/정신폭발/\n얼음칼날/용의비상/번개파수기/칼날방패/지옥불의파동)",
+    "plPL": "Ekwipunek",
+    "esMX": "Inventario",
+    "jaJP": "所持品",
+    "ptBR": "Inventário",
+    "ruRU": "Инвентарь",
+    "zhCN": "物品栏",
+    "id": 50010,
+    "Key": "hudpanelStr12",
+    "enUS": "ÿc4[Sunder (Base)]\nÿc0Elemental (Cold/Fire/Light/Poison): ÿc9-90% res\nÿc0Magic (Black Cleft): ÿc9-65% Magic Res\nÿc0Physical (Bone Break): ÿc9+20% Dmg Taken\nÿc8Immune target is set to 95%\n\nÿc4[Upgraded Sunder (Renewed)]\nÿc0Elemental mats (same roll pool):\nÿc0Cold: Latent + pSapphire + Lum + Eastern Shard\nÿc0Fire: Latent + pRuby + Io + Deep Shard\nÿc0Light: Latent + pTopaz + Fal + Southern Shard\nÿc0Poison: Latent + pEmerald + Ko + Western Shard\nÿc0Physical: Latent Bone Break + pAmethyst + Pul + Northern\nÿc0Magic: Latent Black Cleft + pDiamond + Mal + Southern+Deep+Northern\n\nÿc4[Extra Option Rolls]\nÿc0Elemental Renewed: ÿc9shared extra-roll pool\nÿc0Physical Renewed: ÿc9physical-only extra-roll pool\nÿc0Magic Renewed: ÿc9magic-only extra-roll pool"
+   },
+   "minihealthOn": {
+    "id": 28244,
+    "Key": "minihealthOn",
+    "enUS": "Mini",
+    "zhTW": "test",
+    "deDE": "test",
+    "esES": "test",
+    "frFR": "test",
+    "itIT": "test",
+    "koKR": "Mini",
+    "plPL": "test",
+    "esMX": "test",
+    "jaJP": "test",
+    "ptBR": "test",
+    "ruRU": "test",
+    "zhCN": "test"
+   },
+   "panelhealth": {
+    "id": 4165,
+    "Key": "panelhealth",
+    "enUS": "%d",
+    "zhTW": "生命：%d / %d",
+    "deDE": "Leben: %d / %d",
+    "esES": "Vida: %d / %d",
+    "frFR": "Vie : %d / %d",
+    "itIT": "Vita: %d / %d",
+    "koKR": "%d",
+    "plPL": "Zdrowie: %d/%d",
+    "esMX": "Vida: %d / %d",
+    "jaJP": "ライフ: %d/%d",
+    "ptBR": "Vida: %d / %d",
+    "ruRU": "Здоровье: %d/%d",
+    "zhCN": "生命: %d / %d"
+   },
+   "panelmana": {
+    "id": 4166,
+    "Key": "panelmana",
+    "enUS": "%d",
+    "zhTW": "法力：%d / %d",
+    "deDE": "Mana: %d / %d",
+    "esES": "Maná: %d / %d",
+    "frFR": "Mana : %d / %d",
+    "itIT": "Mana: %d / %d",
+    "koKR": "%d",
+    "plPL": "Mana: %d/%d",
+    "esMX": "Maná: %d / %d",
+    "jaJP": "マナ: %d/%d",
+    "ptBR": "Mana: %d / %d",
+    "ruRU": "Мана: %d/%d",
+    "zhCN": "法力: %d / %d"
+   }
+  }
+ },
+ "npc-names": {
+  "npcs.json": {
+   "asheara": {
+    "id": 1008,
+    "Key": "asheara",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "hratli": {
+    "id": 1009,
+    "Key": "hratli",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "alkor": {
+    "id": 1010,
+    "Key": "alkor",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "ormus": {
+    "id": 1011,
+    "Key": "ormus",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "tyrael": {
+    "id": 1013,
+    "Key": "tyrael",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Jamella": {
+    "id": 1016,
+    "Key": "Jamella",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "halbu": {
+    "id": 1017,
+    "Key": "halbu",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "DeckardCain": {
+    "id": 2890,
+    "Key": "DeckardCain",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Gheed": {
+    "id": 2891,
+    "Key": "Gheed",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Akara": {
+    "id": 2892,
+    "Key": "Akara",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Kashya": {
+    "id": 2893,
+    "Key": "Kashya",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Charsi": {
+    "id": 2894,
+    "Key": "Charsi",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Wariv": {
+    "id": 2895,
+    "Key": "Wariv",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Warriv": {
+    "id": 2896,
+    "Key": "Warriv",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Natalya": {
+    "id": 3022,
+    "Key": "Natalya",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Drognan": {
+    "id": 3023,
+    "Key": "Drognan",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Atma": {
+    "id": 3024,
+    "Key": "Atma",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Fara": {
+    "id": 3025,
+    "Key": "Fara",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Lysander": {
+    "id": 3026,
+    "Key": "Lysander",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Jerhyn": {
+    "id": 3027,
+    "Key": "Jerhyn",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "jerhyn": {
+    "id": 3028,
+    "Key": "jerhyn",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Elzix": {
+    "id": 3030,
+    "Key": "Elzix",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Greiz": {
+    "id": 3031,
+    "Key": "Greiz",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Meshif": {
+    "id": 3032,
+    "Key": "Meshif",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "meshif": {
+    "id": 3114,
+    "Key": "meshif",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Larzuk": {
+    "id": 22476,
+    "Key": "Larzuk",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Drehya": {
+    "id": 22477,
+    "Key": "Drehya",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Malah": {
+    "id": 22478,
+    "Key": "Malah",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   },
+   "Nihlathak": {
+    "id": 22483,
+    "Key": "Nihlathak",
+    "enUS": "",
+    "zhTW": "",
+    "deDE": "",
+    "esES": "",
+    "frFR": "",
+    "itIT": "",
+    "koKR": "",
+    "plPL": "",
+    "esMX": "",
+    "jaJP": "",
+    "ptBR": "",
+    "ruRU": "",
+    "zhCN": ""
+   }
+  }
+ },
+ "item-icons-and-nameplates": {
+  "item-names.json": {
+   "8ws": {
+    "id": 2114,
+    "Key": "8ws",
+    "enUS": "ⁱ Rune Staff"
+   },
+   "8bs": {
+    "id": 2115,
+    "Key": "8bs",
+    "enUS": "ⁱ Gothic Staff"
+   },
+   "8cs": {
+    "id": 2116,
+    "Key": "8cs",
+    "enUS": "ⁱ Cedar Staff"
+   },
+   "8ls": {
+    "id": 2117,
+    "Key": "8ls",
+    "enUS": "ⁱ Quarterstaff"
+   },
+   "8ss": {
+    "id": 2118,
+    "Key": "8ss",
+    "enUS": "ⁱ Jo Staff"
+   },
+   "9ws": {
+    "id": 2163,
+    "Key": "9ws",
+    "enUS": "ⁱ Divine Scepter"
+   },
+   "9qs": {
+    "id": 2164,
+    "Key": "9qs",
+    "enUS": "ⁱ Holy Water Sprinkler"
+   },
+   "9sc": {
+    "id": 2165,
+    "Key": "9sc",
+    "enUS": "ⁱ Rune Scepter"
+   },
+   "gpl": {
+    "id": 2182,
+    "Key": "gpl",
+    "enUS": "ÿc2¹Ⅷ  "
+   },
+   "opl": {
+    "id": 2183,
+    "Key": "opl",
+    "enUS": "ÿc8¹Ⅷ  "
+   },
+   "gpm": {
+    "id": 2184,
+    "Key": "gpm",
+    "enUS": "ÿc2²Ⅷ  "
+   },
+   "opm": {
+    "id": 2185,
+    "Key": "opm",
+    "enUS": "ÿc8²Ⅷ  "
+   },
+   "gps": {
+    "id": 2186,
+    "Key": "gps",
+    "enUS": "ÿc2³Ⅷ  "
+   },
+   "ops": {
+    "id": 2187,
+    "Key": "ops",
+    "enUS": "ÿc8³Ⅷ  "
+   },
+   "tbk": {
+    "id": 2199,
+    "Key": "tbk",
+    "enUS": "ÿc3Ⅹÿc0  Tome"
+   },
+   "tsc": {
+    "id": 2200,
+    "Key": "tsc",
+    "enUS": "ÿc3Ⅸ "
+   },
+   "ibk": {
+    "id": 2201,
+    "Key": "ibk",
+    "enUS": "ÿc1Ⅹÿc0  Tome"
+   },
+   "isc": {
+    "id": 2202,
+    "Key": "isc",
+    "enUS": "ÿc1Ⅸ "
+   },
+   "vps": {
+    "id": 2207,
+    "Key": "vps",
+    "enUS": ""
+   },
+   "yps": {
+    "id": 2208,
+    "Key": "yps",
+    "enUS": ""
+   },
+   "rvs": {
+    "id": 2209,
+    "Key": "rvs",
+    "enUS": "ÿc;¹Ⅷ  "
+   },
+   "rvl": {
+    "id": 2210,
+    "Key": "rvl",
+    "enUS": "ÿc;²Ⅷ  "
+   },
+   "wms": {
+    "id": 2211,
+    "Key": "wms",
+    "enUS": ""
+   },
+   "amu": {
+    "id": 2212,
+    "Key": "amu",
+    "enUS": "Ⅽ  Amulet"
+   },
+   "rin": {
+    "id": 2214,
+    "Key": "rin",
+    "enUS": "Ⅼ  Ring"
+   },
+   "aqv": {
+    "id": 2218,
+    "Key": "aqv",
+    "enUS": "Ⅶ "
+   },
+   "cqv": {
+    "id": 2220,
+    "Key": "cqv",
+    "enUS": "Ⅶ "
+   },
+   "key": {
+    "id": 2222,
+    "Key": "key",
+    "enUS": "ÿc4Ⅺ "
+   },
+   "gcv": {
+    "id": 2236,
+    "Key": "gcv",
+    "enUS": "ÿc;₀ C Amethyst"
+   },
+   "gfv": {
+    "id": 2237,
+    "Key": "gfv",
+    "enUS": "ÿc;₁ F Amethyst"
+   },
+   "gsv": {
+    "id": 2238,
+    "Key": "gsv",
+    "enUS": "ÿc;₃ Amethyst"
+   },
+   "gzv": {
+    "id": 2239,
+    "Key": "gzv",
+    "enUS": "ÿc;₄ Fl Amethyst"
+   },
+   "gpv": {
+    "id": 2240,
+    "Key": "gpv",
+    "enUS": "ÿc;¾ P Amethyst"
+   },
+   "gcy": {
+    "id": 2241,
+    "Key": "gcy",
+    "enUS": "ÿc9₀ C Topaz"
+   },
+   "gfy": {
+    "id": 2242,
+    "Key": "gfy",
+    "enUS": "ÿc9₁ F Topaz"
+   },
+   "gsy": {
+    "id": 2243,
+    "Key": "gsy",
+    "enUS": "ÿc9₃ Topaz"
+   },
+   "gly": {
+    "id": 2244,
+    "Key": "gly",
+    "enUS": "ÿc9₄ Fl Topaz"
+   },
+   "gpy": {
+    "id": 2245,
+    "Key": "gpy",
+    "enUS": "ÿc9¾ P Topaz"
+   },
+   "gcb": {
+    "id": 2246,
+    "Key": "gcb",
+    "enUS": "ÿc3₀ C Sapphire"
+   },
+   "gfb": {
+    "id": 2247,
+    "Key": "gfb",
+    "enUS": "ÿc3₁ F Sapphire"
+   },
+   "glb": {
+    "id": 2249,
+    "Key": "glb",
+    "enUS": "ÿc3₄ Fl Sapphire"
+   },
+   "gpb": {
+    "id": 2250,
+    "Key": "gpb",
+    "enUS": "ÿc3¾ P Sapphire"
+   },
+   "gcg": {
+    "id": 2251,
+    "Key": "gcg",
+    "enUS": "ÿc2₀ C Emerald"
+   },
+   "gfg": {
+    "id": 2252,
+    "Key": "gfg",
+    "enUS": "ÿc2₁ F Emerald"
+   },
+   "glg": {
+    "id": 2253,
+    "Key": "glg",
+    "enUS": "ÿc2₄ Fl Emerald"
+   },
+   "gpg": {
+    "id": 2255,
+    "Key": "gpg",
+    "enUS": "ÿc2¾ P Emerald"
+   },
+   "gcr": {
+    "id": 2256,
+    "Key": "gcr",
+    "enUS": "ÿc1₀ C Ruby"
+   },
+   "gfr": {
+    "id": 2257,
+    "Key": "gfr",
+    "enUS": "ÿc1₁ F Ruby"
+   },
+   "glr": {
+    "id": 2259,
+    "Key": "glr",
+    "enUS": "ÿc1₃ Fl Ruby"
+   },
+   "gpr": {
+    "id": 2260,
+    "Key": "gpr",
+    "enUS": "ÿc1¾ P Ruby"
+   },
+   "gcw": {
+    "id": 2261,
+    "Key": "gcw",
+    "enUS": "₀ C Diamond"
+   },
+   "gfw": {
+    "id": 2262,
+    "Key": "gfw",
+    "enUS": "₁ F Diamond"
+   },
+   "glw": {
+    "id": 2264,
+    "Key": "glw",
+    "enUS": "₄ Fl Diamond"
+   },
+   "gpw": {
+    "id": 2265,
+    "Key": "gpw",
+    "enUS": "¾ P Diamond"
+   },
+   "hp1": {
+    "id": 2266,
+    "Key": "hp1",
+    "enUS": "ÿc1¹Ⅷ  "
+   },
+   "hp2": {
+    "id": 2267,
+    "Key": "hp2",
+    "enUS": "ÿc1²Ⅷ  "
+   },
+   "hp3": {
+    "id": 2268,
+    "Key": "hp3",
+    "enUS": "ÿc1³Ⅷ  "
+   },
+   "hp4": {
+    "id": 2269,
+    "Key": "hp4",
+    "enUS": "ÿc1⁴Ⅷ  "
+   },
+   "hp5": {
+    "id": 2270,
+    "Key": "hp5",
+    "enUS": "ÿc1⁵Ⅷ  "
+   },
+   "mp1": {
+    "id": 2271,
+    "Key": "mp1",
+    "enUS": "ÿc3¹Ⅷ  "
+   },
+   "mp2": {
+    "id": 2272,
+    "Key": "mp2",
+    "enUS": "ÿc3²Ⅷ  "
+   },
+   "mp3": {
+    "id": 2273,
+    "Key": "mp3",
+    "enUS": "ÿc3³Ⅷ  "
+   },
+   "mp4": {
+    "id": 2274,
+    "Key": "mp4",
+    "enUS": "ÿc3⁴Ⅷ  "
+   },
+   "mp5": {
+    "id": 2275,
+    "Key": "mp5",
+    "enUS": "ÿc3⁵Ⅷ  "
+   },
+   "skc": {
+    "id": 2277,
+    "Key": "skc",
+    "enUS": "ÿc5₀ C Skull"
+   },
+   "skf": {
+    "id": 2278,
+    "Key": "skf",
+    "enUS": "ÿc5₁ F Skull"
+   },
+   "sku": {
+    "id": 2279,
+    "Key": "sku",
+    "enUS": "ÿc5₃ Skull"
+   },
+   "skl": {
+    "id": 2280,
+    "Key": "skl",
+    "enUS": "ÿc5₄ Fl Skull"
+   },
+   "skz": {
+    "id": 2281,
+    "Key": "skz",
+    "enUS": "ÿc5¼ P Skull"
+   },
+   "aegis": {
+    "id": 2407,
+    "Key": "aegis",
+    "enUS": "₉ Aegis"
+   },
+   "ward": {
+    "id": 2408,
+    "Key": "ward",
+    "enUS": "₉ Ward"
+   },
+   "7wa": {
+    "id": 11010,
+    "Key": "7wa",
+    "enUS": "₉ Berserker Axe"
+   },
+   "pk1": {
+    "id": 11146,
+    "Key": "pk1",
+    "enUS": "\nÿc1₆  Key of Terror ₆\n"
+   },
+   "pk2": {
+    "id": 11147,
+    "Key": "pk2",
+    "enUS": "\nÿc1₆  Key of Hate ₆\n"
+   },
+   "pk3": {
+    "id": 11148,
+    "Key": "pk3",
+    "enUS": "\nÿc1₆  Key of Destruction ₆\n"
+   },
+   "dhn": {
+    "id": 11149,
+    "Key": "dhn",
+    "enUS": "\nÿc1₈ Diablo's Horn ₈\n"
+   },
+   "bey": {
+    "id": 11150,
+    "Key": "bey",
+    "enUS": "\nÿc1₈ Baal's Eye ₈\n"
+   },
+   "mbr": {
+    "id": 11151,
+    "Key": "mbr",
+    "enUS": "\nÿc1₈ Mephisto's Brain ₈\n"
+   },
+   "std": {
+    "id": 11152,
+    "Key": "std",
+    "enUS": "\nÿc1₇ Standard of Heroes ₇\n"
+   },
+   "tes": {
+    "id": 11164,
+    "Key": "tes",
+    "enUS": "ÿc4¹ÿc8₅ Essence of Suffering"
+   },
+   "ceh": {
+    "id": 11165,
+    "Key": "ceh",
+    "enUS": "ÿc4³ÿc8₅ Essence of Hatred"
+   },
+   "bet": {
+    "id": 11166,
+    "Key": "bet",
+    "enUS": "ÿc4⁴ÿc8₅ Essence of Terror"
+   },
+   "fed": {
+    "id": 11167,
+    "Key": "fed",
+    "enUS": "ÿc4⁵ÿc8₅ Essence of Destruction"
+   },
+   "7ar": {
+    "id": 20194,
+    "Key": "7ar",
+    "enUS": "₉ Suwayyah"
+   },
+   "7wb": {
+    "id": 20195,
+    "Key": "7wb",
+    "enUS": "₉ Wrist Sword"
+   },
+   "7xf": {
+    "id": 20196,
+    "Key": "7xf",
+    "enUS": "₉ War Fist"
+   },
+   "7cs": {
+    "id": 20197,
+    "Key": "7cs",
+    "enUS": "₉ Battle Cestus"
+   },
+   "7lw": {
+    "id": 20198,
+    "Key": "7lw",
+    "enUS": "₉ Feral Claws"
+   },
+   "7tw": {
+    "id": 20199,
+    "Key": "7tw",
+    "enUS": "₉ Runic Talons"
+   },
+   "7qr": {
+    "id": 20200,
+    "Key": "7qr",
+    "enUS": "₉ Scissors Suwayyah"
+   },
+   "7ha": {
+    "id": 20201,
+    "Key": "7ha",
+    "enUS": "₉ Tomahawk"
+   },
+   "72a": {
+    "id": 20203,
+    "Key": "72a",
+    "enUS": "₉ Ettin Axe"
+   },
+   "7mp": {
+    "id": 20204,
+    "Key": "7mp",
+    "enUS": "₉ War Spike"
+   },
+   "7la": {
+    "id": 20206,
+    "Key": "7la",
+    "enUS": "₉ Feral Axe"
+   },
+   "7ba": {
+    "id": 20207,
+    "Key": "7ba",
+    "enUS": "₉ Silver-edged Axe"
+   },
+   "7bt": {
+    "id": 20208,
+    "Key": "7bt",
+    "enUS": "₉ Decapitator"
+   },
+   "7ga": {
+    "id": 20209,
+    "Key": "7ga",
+    "enUS": "₉ Champion Axe"
+   },
+   "7gi": {
+    "id": 20210,
+    "Key": "7gi",
+    "enUS": "₉ Glorious Axe"
+   },
+   "7wn": {
+    "id": 20211,
+    "Key": "7wn",
+    "enUS": "₉ Polished Wand"
+   },
+   "7yw": {
+    "id": 20212,
+    "Key": "7yw",
+    "enUS": "₉ Ghost Wand"
+   },
+   "7bw": {
+    "id": 20213,
+    "Key": "7bw",
+    "enUS": "₉ Lich Wand"
+   },
+   "7gw": {
+    "id": 20214,
+    "Key": "7gw",
+    "enUS": "₉ Unearthed Wand"
+   },
+   "7sc": {
+    "id": 20216,
+    "Key": "7sc",
+    "enUS": "₉ Mighty Scepter"
+   },
+   "7qs": {
+    "id": 20217,
+    "Key": "7qs",
+    "enUS": "₉ Seraph Rod"
+   },
+   "7ws": {
+    "id": 20218,
+    "Key": "7ws",
+    "enUS": "₉ Caduceus"
+   },
+   "7sp": {
+    "id": 20219,
+    "Key": "7sp",
+    "enUS": "₉ Tyrant Club"
+   },
+   "7mt": {
+    "id": 20221,
+    "Key": "7mt",
+    "enUS": "₉ Devil Star"
+   },
+   "7fl": {
+    "id": 20222,
+    "Key": "7fl",
+    "enUS": "₉ Scourge"
+   },
+   "7wh": {
+    "id": 20223,
+    "Key": "7wh",
+    "enUS": "₉ Legendary Mallet"
+   },
+   "7m7": {
+    "id": 20224,
+    "Key": "7m7",
+    "enUS": "₉ Ogre Maul"
+   },
+   "7gm": {
+    "id": 20225,
+    "Key": "7gm",
+    "enUS": "₉ Thunder Maul"
+   },
+   "7sm": {
+    "id": 20227,
+    "Key": "7sm",
+    "enUS": "₉ Ataghan"
+   },
+   "7sb": {
+    "id": 20228,
+    "Key": "7sb",
+    "enUS": "₉ Elegant Blade"
+   },
+   "7cr": {
+    "id": 20230,
+    "Key": "7cr",
+    "enUS": "₉ Phase Blade"
+   },
+   "7bs": {
+    "id": 20231,
+    "Key": "7bs",
+    "enUS": "₉ Conquest Sword"
+   },
+   "7ls": {
+    "id": 20232,
+    "Key": "7ls",
+    "enUS": "₉ Cryptic Sword"
+   },
+   "7wd": {
+    "id": 20233,
+    "Key": "7wd",
+    "enUS": "₉ Mythical Sword"
+   },
+   "7gs": {
+    "id": 20236,
+    "Key": "7gs",
+    "enUS": "₉ Balrog Blade"
+   },
+   "7b7": {
+    "id": 20237,
+    "Key": "7b7",
+    "enUS": "₉ Champion Sword"
+   },
+   "7fb": {
+    "id": 20238,
+    "Key": "7fb",
+    "enUS": "₉ Colossus Sword"
+   },
+   "7gd": {
+    "id": 20239,
+    "Key": "7gd",
+    "enUS": "₉ Colossus Blade"
+   },
+   "7dg": {
+    "id": 20240,
+    "Key": "7dg",
+    "enUS": "₉ Bone Knife"
+   },
+   "7kr": {
+    "id": 20242,
+    "Key": "7kr",
+    "enUS": "₉ Fanged Knife"
+   },
+   "7bl": {
+    "id": 20243,
+    "Key": "7bl",
+    "enUS": "₉ Legend Spike"
+   },
+   "7tk": {
+    "id": 20244,
+    "Key": "7tk",
+    "enUS": "₉ Flying Knife"
+   },
+   "7ta": {
+    "id": 20245,
+    "Key": "7ta",
+    "enUS": "₉ Flying Axe"
+   },
+   "7bk": {
+    "id": 20246,
+    "Key": "7bk",
+    "enUS": "₉ Winged Knife"
+   },
+   "7b8": {
+    "id": 20247,
+    "Key": "7b8",
+    "enUS": "₉ Winged Axe"
+   },
+   "7ja": {
+    "id": 20248,
+    "Key": "7ja",
+    "enUS": "₉ Hyperion Javelin"
+   },
+   "7pi": {
+    "id": 20249,
+    "Key": "7pi",
+    "enUS": "₉ Stygian Pilum"
+   },
+   "7s7": {
+    "id": 20250,
+    "Key": "7s7",
+    "enUS": "₉ Balrog Spear"
+   },
+   "7gl": {
+    "id": 20251,
+    "Key": "7gl",
+    "enUS": "₉ Ghost Glaive"
+   },
+   "7ts": {
+    "id": 20252,
+    "Key": "7ts",
+    "enUS": "₉ Winged Harpoon"
+   },
+   "7sr": {
+    "id": 20253,
+    "Key": "7sr",
+    "enUS": "₉ Hyperion Spear"
+   },
+   "7br": {
+    "id": 20255,
+    "Key": "7br",
+    "enUS": "₉ Mancatcher"
+   },
+   "7st": {
+    "id": 20256,
+    "Key": "7st",
+    "enUS": "₉ Ghost Spear"
+   },
+   "7p7": {
+    "id": 20257,
+    "Key": "7p7",
+    "enUS": "₉ War Pike"
+   },
+   "7o7": {
+    "id": 20258,
+    "Key": "7o7",
+    "enUS": "₉ Ogre Axe"
+   },
+   "7vo": {
+    "id": 20259,
+    "Key": "7vo",
+    "enUS": "₉ Colossus Voulge"
+   },
+   "7s8": {
+    "id": 20260,
+    "Key": "7s8",
+    "enUS": "₉ Thresher"
+   },
+   "7pa": {
+    "id": 20261,
+    "Key": "7pa",
+    "enUS": "₉ Cryptic Axe"
+   },
+   "7h7": {
+    "id": 20262,
+    "Key": "7h7",
+    "enUS": "₉ Great Poleaxe"
+   },
+   "7wc": {
+    "id": 20263,
+    "Key": "7wc",
+    "enUS": "₉ Giant Thresher"
+   },
+   "6ss": {
+    "id": 20264,
+    "Key": "6ss",
+    "enUS": "₉ Walking Stick"
+   },
+   "6ls": {
+    "id": 20265,
+    "Key": "6ls",
+    "enUS": "₉ Stalagmite"
+   },
+   "6cs": {
+    "id": 20266,
+    "Key": "6cs",
+    "enUS": "₉ Elder Staff"
+   },
+   "6bs": {
+    "id": 20267,
+    "Key": "6bs",
+    "enUS": "₉ Shillelagh"
+   },
+   "6ws": {
+    "id": 20268,
+    "Key": "6ws",
+    "enUS": "₉ Archon Staff"
+   },
+   "6rx": {
+    "id": 20280,
+    "Key": "6rx",
+    "enUS": "₉ Demon Crossbow"
+   },
+   "obb": {
+    "id": 20307,
+    "Key": "obb",
+    "enUS": "₉ Heavenly Stone"
+   },
+   "obc": {
+    "id": 20308,
+    "Key": "obc",
+    "enUS": "₉ Eldritch Orb"
+   },
+   "obd": {
+    "id": 20309,
+    "Key": "obd",
+    "enUS": "₉ Demon Heart"
+   },
+   "obe": {
+    "id": 20310,
+    "Key": "obe",
+    "enUS": "₉ Vortex Orb"
+   },
+   "obf": {
+    "id": 20311,
+    "Key": "obf",
+    "enUS": "₉ Dimensional Shard"
+   },
+   "amb": {
+    "id": 20312,
+    "Key": "amb",
+    "enUS": "₉ Matriarchal Bow"
+   },
+   "amc": {
+    "id": 20313,
+    "Key": "amc",
+    "enUS": "₉ Grand Matron Bow"
+   },
+   "amd": {
+    "id": 20314,
+    "Key": "amd",
+    "enUS": "₉ Matriarchal Spear"
+   },
+   "amf": {
+    "id": 20316,
+    "Key": "amf",
+    "enUS": "₉ Matriarchal Javelin"
+   },
+   "ci3": {
+    "id": 20340,
+    "Key": "ci3",
+    "enUS": "₉ Diadem"
+   },
+   "uap": {
+    "id": 20341,
+    "Key": "uap",
+    "enUS": "₉ Shako"
+   },
+   "ukp": {
+    "id": 20342,
+    "Key": "ukp",
+    "enUS": "₉ Hydraskull"
+   },
+   "ulm": {
+    "id": 20343,
+    "Key": "ulm",
+    "enUS": "₉ Armet"
+   },
+   "uhl": {
+    "id": 20344,
+    "Key": "uhl",
+    "enUS": "₉ Giant Conch"
+   },
+   "uhm": {
+    "id": 20345,
+    "Key": "uhm",
+    "enUS": "₉ Spired Helm"
+   },
+   "urn": {
+    "id": 20346,
+    "Key": "urn",
+    "enUS": "₉ Corona"
+   },
+   "usk": {
+    "id": 20347,
+    "Key": "usk",
+    "enUS": "₉ Demonhead"
+   },
+   "uui": {
+    "id": 20348,
+    "Key": "uui",
+    "enUS": "₉ Dusk Shroud"
+   },
+   "uea": {
+    "id": 20349,
+    "Key": "uea",
+    "enUS": "₉ Wyrmhide"
+   },
+   "ula": {
+    "id": 20350,
+    "Key": "ula",
+    "enUS": "₉ Scarab Husk"
+   },
+   "utu": {
+    "id": 20351,
+    "Key": "utu",
+    "enUS": "₉ Wire Fleece"
+   },
+   "ung": {
+    "id": 20352,
+    "Key": "ung",
+    "enUS": "₉ Diamond Mail"
+   },
+   "ucl": {
+    "id": 20353,
+    "Key": "ucl",
+    "enUS": "₉ Loricated Mail"
+   },
+   "uhn": {
+    "id": 20354,
+    "Key": "uhn",
+    "enUS": "₉ Boneweave"
+   },
+   "urs": {
+    "id": 20355,
+    "Key": "urs",
+    "enUS": "₉ Great Hauberk"
+   },
+   "upl": {
+    "id": 20356,
+    "Key": "upl",
+    "enUS": "₉ Balrog Skin"
+   },
+   "ult": {
+    "id": 20357,
+    "Key": "ult",
+    "enUS": "₉ Hellforge Plate"
+   },
+   "uld": {
+    "id": 20358,
+    "Key": "uld",
+    "enUS": "₉ Kraken Shell"
+   },
+   "uth": {
+    "id": 20359,
+    "Key": "uth",
+    "enUS": "₉ Lacquered Plate"
+   },
+   "uul": {
+    "id": 20360,
+    "Key": "uul",
+    "enUS": "₉ Shadow Plate"
+   },
+   "uar": {
+    "id": 20361,
+    "Key": "uar",
+    "enUS": "₉ Sacred Armor"
+   },
+   "utp": {
+    "id": 20362,
+    "Key": "utp",
+    "enUS": "₉ Archon Plate"
+   },
+   "uuc": {
+    "id": 20363,
+    "Key": "uuc",
+    "enUS": "₉ Heater"
+   },
+   "uml": {
+    "id": 20364,
+    "Key": "uml",
+    "enUS": "₉ Luna"
+   },
+   "urg": {
+    "id": 20365,
+    "Key": "urg",
+    "enUS": "₉ Hyperion"
+   },
+   "uit": {
+    "id": 20366,
+    "Key": "uit",
+    "enUS": "₉ Monarch"
+   },
+   "uow": {
+    "id": 20367,
+    "Key": "uow",
+    "enUS": "₉ Aegis"
+   },
+   "uts": {
+    "id": 20368,
+    "Key": "uts",
+    "enUS": "₉ Ward"
+   },
+   "ulg": {
+    "id": 20369,
+    "Key": "ulg",
+    "enUS": "₉ Bramble Mitts"
+   },
+   "uvg": {
+    "id": 20370,
+    "Key": "uvg",
+    "enUS": "₉ Vampirebone Gloves"
+   },
+   "umg": {
+    "id": 20371,
+    "Key": "umg",
+    "enUS": "₉ Vambraces"
+   },
+   "utg": {
+    "id": 20372,
+    "Key": "utg",
+    "enUS": "₉ Crusader Gauntlets"
+   },
+   "uhg": {
+    "id": 20373,
+    "Key": "uhg",
+    "enUS": "₉ Ogre Gauntlets"
+   },
+   "ulb": {
+    "id": 20374,
+    "Key": "ulb",
+    "enUS": "₉ Wyrmhide Boots"
+   },
+   "uvb": {
+    "id": 20375,
+    "Key": "uvb",
+    "enUS": "₉ Scarabshell Boots"
+   },
+   "umb": {
+    "id": 20376,
+    "Key": "umb",
+    "enUS": "₉ Boneweave Boots"
+   },
+   "utb": {
+    "id": 20377,
+    "Key": "utb",
+    "enUS": "₉ Mirrored Boots"
+   },
+   "uhb": {
+    "id": 20378,
+    "Key": "uhb",
+    "enUS": "₉ Myrmidon Greaves"
+   },
+   "ulc": {
+    "id": 20379,
+    "Key": "ulc",
+    "enUS": "₉ Spiderweb Sash"
+   },
+   "uvc": {
+    "id": 20380,
+    "Key": "uvc",
+    "enUS": "₉ Vampirefang Belt"
+   },
+   "umc": {
+    "id": 20381,
+    "Key": "umc",
+    "enUS": "₉ Mithril Coil"
+   },
+   "utc": {
+    "id": 20382,
+    "Key": "utc",
+    "enUS": "₉ Troll Belt"
+   },
+   "uhc": {
+    "id": 20383,
+    "Key": "uhc",
+    "enUS": "₉ Colossus Girdle"
+   },
+   "uh9": {
+    "id": 20384,
+    "Key": "uh9",
+    "enUS": "₉ Bone Visage"
+   },
+   "ush": {
+    "id": 20385,
+    "Key": "ush",
+    "enUS": "₉ Troll Nest"
+   },
+   "upk": {
+    "id": 20386,
+    "Key": "upk",
+    "enUS": "₉ Blade Barrier"
+   },
+   "dre": {
+    "id": 20407,
+    "Key": "dre",
+    "enUS": "₉ Sky Spirit"
+   },
+   "drc": {
+    "id": 20408,
+    "Key": "drc",
+    "enUS": "₉ Sun Spirit"
+   },
+   "drd": {
+    "id": 20409,
+    "Key": "drd",
+    "enUS": "₉ Earth Spirit"
+   },
+   "drb": {
+    "id": 20410,
+    "Key": "drb",
+    "enUS": "₉ Blood Spirit"
+   },
+   "drf": {
+    "id": 20411,
+    "Key": "drf",
+    "enUS": "₉ Dream Spirit"
+   },
+   "bab": {
+    "id": 20412,
+    "Key": "bab",
+    "enUS": "₉ Carnage Helm"
+   },
+   "bac": {
+    "id": 20413,
+    "Key": "bac",
+    "enUS": "₉ Fury Visor"
+   },
+   "bad": {
+    "id": 20414,
+    "Key": "bad",
+    "enUS": "₉ Destroyer Helm"
+   },
+   "bae": {
+    "id": 20415,
+    "Key": "bae",
+    "enUS": "₉ Conqueror Crown"
+   },
+   "baf": {
+    "id": 20416,
+    "Key": "baf",
+    "enUS": "₉ Guardian Crown"
+   },
+   "pab": {
+    "id": 20417,
+    "Key": "pab",
+    "enUS": "₉ Sacred Targe"
+   },
+   "pac": {
+    "id": 20418,
+    "Key": "pac",
+    "enUS": "₉ Sacred Rondache"
+   },
+   "pae": {
+    "id": 20419,
+    "Key": "pae",
+    "enUS": "₉ Zakarum Shield"
+   },
+   "paf": {
+    "id": 20420,
+    "Key": "paf",
+    "enUS": "₉ Vortex Shield"
+   },
+   "neb": {
+    "id": 20421,
+    "Key": "neb",
+    "enUS": "₉ Minion Skull"
+   },
+   "nec": {
+    "id": 20422,
+    "Key": "nec",
+    "enUS": "₉ Hellspawn Skull"
+   },
+   "ned": {
+    "id": 20423,
+    "Key": "ned",
+    "enUS": "₉ Overseer Skull"
+   },
+   "nee": {
+    "id": 20424,
+    "Key": "nee",
+    "enUS": "₉ Succubus Skull"
+   },
+   "nef": {
+    "id": 20425,
+    "Key": "nef",
+    "enUS": "₉ Bloodlord Skull"
+   },
+   "cm1": {
+    "id": 20435,
+    "Key": "cm1",
+    "enUS": "ÿc1Ⅻ  Small Charmÿc3"
+   },
+   "cm2": {
+    "id": 20436,
+    "Key": "cm2",
+    "enUS": "ÿc1Ⅻ  Large Charmÿc3"
+   },
+   "cm3": {
+    "id": 20437,
+    "Key": "cm3",
+    "enUS": "ÿc1Ⅻ  Grand Charmÿc3"
+   },
+   "pad": {
+    "id": 21779,
+    "Key": "pad",
+    "enUS": "₉ Kurast Shield"
+   },
+   "gsb": {
+    "id": 2248,
+    "Key": "gsb",
+    "enUS": "Sapphire ÿc5[+2Ist=Gul]",
+    "zhTW": "藍寶石",
+    "deDE": "Saphir",
+    "esES": "Zafiro",
+    "frFR": "Saphir",
+    "itIT": "Zaffiro",
+    "koKR": "사파이어 ÿc5[+2이스트=굴]",
+    "plPL": "Szafir",
+    "esMX": "[ms]Zafiro",
+    "jaJP": "サファイア",
+    "ptBR": "Safira",
+    "ruRU": "[ms]Сапфир",
+    "zhCN": "蓝宝石"
+   },
+   "gsg": {
+    "id": 2254,
+    "Key": "gsg",
+    "enUS": "Emerald ÿc5[+2Vex=Ohm]",
+    "zhTW": "綠寶石",
+    "deDE": "Smaragd",
+    "esES": "Esmeralda",
+    "frFR": "Émeraude",
+    "itIT": "Smeraldo",
+    "koKR": "에메랄드 ÿc5[+2벡스=오움]",
+    "plPL": "Szmaragd",
+    "esMX": "[fs]Esmeralda",
+    "jaJP": "エメラルド",
+    "ptBR": "Esmeralda",
+    "ruRU": "[ms]Изумруд",
+    "zhCN": "绿宝石"
+   },
+   "gsr": {
+    "id": 2258,
+    "Key": "gsr",
+    "enUS": "Ruby ÿc5[+2Gul=Vex]",
+    "zhTW": "紅寶石",
+    "deDE": "Rubin",
+    "esES": "Rubí",
+    "frFR": "Rubis",
+    "itIT": "Rubino",
+    "koKR": "루비 ÿc5[+2굴=벡스]",
+    "plPL": "Rubin",
+    "esMX": "[ms]Rubí",
+    "jaJP": "ルビー",
+    "ptBR": "Rubi",
+    "ruRU": "[ms]Рубин",
+    "zhCN": "红宝石"
+   },
+   "gsw": {
+    "id": 2263,
+    "Key": "gsw",
+    "enUS": "Diamond ÿc5[+2Ohm=Lo]",
+    "zhTW": "鑽石",
+    "deDE": "Diamant",
+    "esES": "Diamante",
+    "frFR": "Diamant",
+    "itIT": "Diamante",
+    "koKR": "다이아몬드 ÿc5[+2오움=로]",
+    "plPL": "Diament",
+    "esMX": "[ms]Diamante",
+    "jaJP": "ダイアモンド",
+    "ptBR": "Diamante",
+    "ruRU": "[ms]Алмаз",
+    "zhCN": "钻石"
+   }
+  },
+  "item-runes.json": {
+   "r16": {
+    "id": 10902,
+    "Key": "r16",
+    "enUS": "ÿc816ⅽ Io Rune ",
+    "zhTW": "符文：埃歐",
+    "deDE": "[fs]Io-Rune",
+    "esES": "Runa Io",
+    "frFR": "[fs]Rune Io",
+    "itIT": "[fs]Runa Io",
+    "koKR": "이오 룬",
+    "plPL": "Runa Io",
+    "esMX": "Runa Io",
+    "jaJP": "イオ・ルーン",
+    "ptBR": "Runa Io",
+    "ruRU": "Руна Ио",
+    "zhCN": "艾欧符文"
+   },
+   "r13": {
+    "id": 10904,
+    "Key": "r13",
+    "enUS": "ÿc813ⅺ Shael Rune",
+    "zhTW": "符文：夏",
+    "deDE": "[fs]Shael-Rune",
+    "esES": "Runa Shael",
+    "frFR": "[fs]Rune Shael",
+    "itIT": "[fs]Runa Shael",
+    "koKR": "샤엘 룬",
+    "plPL": "Runa Shael",
+    "esMX": "Runa Shael",
+    "jaJP": "シャエル・ルーン",
+    "ptBR": "Runa Shael",
+    "ruRU": "Руна Шаэл",
+    "zhCN": "沙伊符文"
+   },
+   "r31": {
+    "id": 10906,
+    "Key": "r31",
+    "enUS": "ÿc1\n31ₙ Jah Rune\n",
+    "zhTW": "符文：喬",
+    "deDE": "[fs]Jah-Rune",
+    "esES": "Runa Jah",
+    "frFR": "[fs]Rune Jah",
+    "itIT": "[fs]Runa Jah",
+    "koKR": "자 룬",
+    "plPL": "Runa Jah",
+    "esMX": "Runa Jah",
+    "jaJP": "ジャー・ルーン",
+    "ptBR": "Runa Jah",
+    "ruRU": "Руна Джа",
+    "zhCN": "扎哈符文"
+   },
+   "r33": {
+    "id": 20440,
+    "Key": "r33",
+    "enUS": "ÿc1\n33ₛ Zod Rune\n",
+    "zhTW": "符文：薩德",
+    "deDE": "[fs]Zod-Rune",
+    "esES": "Runa Zod",
+    "frFR": "[fs]Rune Zod",
+    "itIT": "[fs]Runa Zod",
+    "koKR": "조드 룬",
+    "plPL": "Runa Zod",
+    "esMX": "Runa Zod",
+    "jaJP": "ゾッド・ルーン",
+    "ptBR": "Runa Zod",
+    "ruRU": "Руна Зод",
+    "zhCN": "佐德符文"
+   },
+   "r32": {
+    "id": 20441,
+    "Key": "r32",
+    "enUS": "ÿc1\n32ₚ Cham Rune\n",
+    "zhTW": "符文：查姆",
+    "deDE": "[fs]Cham-Rune",
+    "esES": "Runa Cham",
+    "frFR": "[fs]Rune Cham",
+    "itIT": "[fs]Runa Cham",
+    "koKR": "참 룬",
+    "plPL": "Runa Cham",
+    "esMX": "Runa Cham",
+    "jaJP": "チャム・ルーン",
+    "ptBR": "Runa Cham",
+    "ruRU": "Руна Чам",
+    "zhCN": "查姆符文"
+   },
+   "r30": {
+    "id": 20443,
+    "Key": "r30",
+    "enUS": "ÿc1\n30ₘ Ber Rune\n",
+    "zhTW": "符文：貝",
+    "deDE": "[fs]Ber-Rune",
+    "esES": "Runa Ber",
+    "frFR": "[fs]Rune Ber",
+    "itIT": "[fs]Runa Ber",
+    "koKR": "베르 룬",
+    "plPL": "Runa Ber",
+    "esMX": "Runa Ber",
+    "jaJP": "バー・ルーン",
+    "ptBR": "Runa Ber",
+    "ruRU": "Руна Бер",
+    "zhCN": "贝符文"
+   },
+   "r29": {
+    "id": 20444,
+    "Key": "r29",
+    "enUS": "ÿc1\n29ₗ Sur Rune\n",
+    "zhTW": "符文：瑟",
+    "deDE": "[fs]Sur-Rune",
+    "esES": "Runa Sur",
+    "frFR": "[fs]Rune Sur",
+    "itIT": "[fs]Runa Sur",
+    "koKR": "수르 룬",
+    "plPL": "Runa Sur",
+    "esMX": "Runa Sur",
+    "jaJP": "サー・ルーン",
+    "ptBR": "Runa Sur",
+    "ruRU": "Руна Сур",
+    "zhCN": "瑟符文"
+   },
+   "r28": {
+    "id": 20445,
+    "Key": "r28",
+    "enUS": "ÿc1\n28ₖ Lo Rune\n",
+    "zhTW": "符文：羅",
+    "deDE": "[fs]Lo-Rune",
+    "esES": "Runa Lo",
+    "frFR": "[fs]Rune Lo",
+    "itIT": "[fs]Runa Lo",
+    "koKR": "로 룬",
+    "plPL": "Runa Lo",
+    "esMX": "Runa Lo",
+    "jaJP": "ロー・ルーン",
+    "ptBR": "Runa Lo",
+    "ruRU": "Руна Ло",
+    "zhCN": "罗符文"
+   },
+   "r27": {
+    "id": 20446,
+    "Key": "r27",
+    "enUS": "ÿc1\n27ₕ Ohm Rune\n",
+    "zhTW": "符文：歐姆",
+    "deDE": "[fs]Ohm-Rune",
+    "esES": "Runa Ohm",
+    "frFR": "[fs]Rune Ohm",
+    "itIT": "[fs]Runa Ohm",
+    "koKR": "오움 룬",
+    "plPL": "Runa Ohm",
+    "esMX": "Runa Ohm",
+    "jaJP": "オーム・ルーン",
+    "ptBR": "Runa Ohm",
+    "ruRU": "Руна Ом",
+    "zhCN": "欧姆符文"
+   },
+   "r26": {
+    "id": 20447,
+    "Key": "r26",
+    "enUS": "ÿc1\n26ₓ Vex Rune\n",
+    "zhTW": "符文：伐克斯",
+    "deDE": "[fs]Vex-Rune",
+    "esES": "Runa Vex",
+    "frFR": "[fs]Rune Vex",
+    "itIT": "[fs]Runa Vex",
+    "koKR": "벡스 룬",
+    "plPL": "Runa Vex",
+    "esMX": "Runa Vex",
+    "jaJP": "ヴェックス・ルーン",
+    "ptBR": "Runa Vex",
+    "ruRU": "Руна Векс",
+    "zhCN": "伐克斯符文"
+   },
+   "r25": {
+    "id": 20448,
+    "Key": "r25",
+    "enUS": "ÿc1\n25ₒ Gul Rune\n",
+    "zhTW": "符文：古爾",
+    "deDE": "[fs]Gul-Rune",
+    "esES": "Runa Gul",
+    "frFR": "[fs]Rune Gul",
+    "itIT": "[fs]Runa Gul",
+    "koKR": "굴 룬",
+    "plPL": "Runa Gul",
+    "esMX": "Runa Gul",
+    "jaJP": "ガル・ルーン",
+    "ptBR": "Runa Gul",
+    "ruRU": "Руна Гул",
+    "zhCN": "古尔符文"
+   },
+   "r24": {
+    "id": 20449,
+    "Key": "r24",
+    "enUS": "ÿc1\n24ₑ Ist Rune\n",
+    "zhTW": "符文：伊司特",
+    "deDE": "[fs]Ist-Rune",
+    "esES": "Runa Ist",
+    "frFR": "[fs]Rune Ist",
+    "itIT": "[fs]Runa Ist",
+    "koKR": "이스트 룬",
+    "plPL": "Runa Ist",
+    "esMX": "Runa Ist",
+    "jaJP": "イスト・ルーン",
+    "ptBR": "Runa Ist",
+    "ruRU": "Руна Ист",
+    "zhCN": "伊司特符文"
+   },
+   "r23": {
+    "id": 20450,
+    "Key": "r23",
+    "enUS": "ÿc1\n23ₐ Mal Rune\n",
+    "zhTW": "符文：馬爾",
+    "deDE": "[fs]Mal-Rune",
+    "esES": "Runa Mal",
+    "frFR": "[fs]Rune Mal",
+    "itIT": "[fs]Runa Mal",
+    "koKR": "말 룬",
+    "plPL": "Runa Mal",
+    "esMX": "Runa Mal",
+    "jaJP": "マル・ルーン",
+    "ptBR": "Runa Mal",
+    "ruRU": "Руна Мал",
+    "zhCN": "玛尔符文"
+   },
+   "r22": {
+    "id": 20451,
+    "Key": "r22",
+    "enUS": "ÿc1\n22⁹ Um Rune\n",
+    "zhTW": "符文：烏姆",
+    "deDE": "[fs]Um-Rune",
+    "esES": "Runa Um",
+    "frFR": "[fs]Rune Um",
+    "itIT": "[fs]Runa Um",
+    "koKR": "우움 룬",
+    "plPL": "Runa Um",
+    "esMX": "Runa Um",
+    "jaJP": "アム・ルーン",
+    "ptBR": "Runa Um",
+    "ruRU": "Руна Ум",
+    "zhCN": "乌姆符文"
+   },
+   "r21": {
+    "id": 20452,
+    "Key": "r21",
+    "enUS": "ÿc1\n21⁸ Pul Rune\n",
+    "zhTW": "符文：普爾",
+    "deDE": "[fs]Pul-Rune",
+    "esES": "Runa Pul",
+    "frFR": "[fs]Rune Pul",
+    "itIT": "[fs]Runa Pul",
+    "koKR": "풀 룬",
+    "plPL": "Runa Pul",
+    "esMX": "Runa Pul",
+    "jaJP": "プル・ルーン",
+    "ptBR": "Runa Pul",
+    "ruRU": "Руна Пул",
+    "zhCN": "普尔符文"
+   },
+   "r20": {
+    "id": 20453,
+    "Key": "r20",
+    "enUS": "ÿc120⁷ Lem Rune",
+    "zhTW": "符文：藍姆",
+    "deDE": "[fs]Lem-Rune",
+    "esES": "Runa Lem",
+    "frFR": "[fs]Rune Lem",
+    "itIT": "[fs]Runa Lem",
+    "koKR": "렘 룬",
+    "plPL": "Runa Lem",
+    "esMX": "Runa Lem",
+    "jaJP": "レム・ルーン",
+    "ptBR": "Runa Lem",
+    "ruRU": "Руна Лем",
+    "zhCN": "兰姆符文"
+   },
+   "r19": {
+    "id": 20454,
+    "Key": "r19",
+    "enUS": "ÿc119⁶ Fal Rune",
+    "zhTW": "符文：法爾",
+    "deDE": "[fs]Fal-Rune",
+    "esES": "Runa Fal",
+    "frFR": "[fs]Rune Fal",
+    "itIT": "[fs]Runa Fal",
+    "koKR": "팔 룬",
+    "plPL": "Runa Fal",
+    "esMX": "Runa Fal",
+    "jaJP": "ファル・ルーン",
+    "ptBR": "Runa Fal",
+    "ruRU": "Руна Фал",
+    "zhCN": "法尔符文"
+   },
+   "r18": {
+    "id": 20455,
+    "Key": "r18",
+    "enUS": "ÿc118ⅿ Ko Rune",
+    "zhTW": "符文：科",
+    "deDE": "[fs]Ko-Rune",
+    "esES": "Runa Ko",
+    "frFR": "[fs]Rune Ko",
+    "itIT": "[fs]Runa Ko",
+    "koKR": "코 룬",
+    "plPL": "Runa Ko",
+    "esMX": "Runa Ko",
+    "jaJP": "コー・ルーン",
+    "ptBR": "Runa Ko",
+    "ruRU": "Руна Ко",
+    "zhCN": "科符文"
+   },
+   "r17": {
+    "id": 20456,
+    "Key": "r17",
+    "enUS": "ÿc117ⅾ Lum Rune",
+    "zhTW": "符文：盧姆",
+    "deDE": "[fs]Lum-Rune",
+    "esES": "Runa Lum",
+    "frFR": "[fs]Rune Lum",
+    "itIT": "[fs]Runa Lum",
+    "koKR": "룸 룬",
+    "plPL": "Runa Lum",
+    "esMX": "Runa Lum",
+    "jaJP": "ラム・ルーン",
+    "ptBR": "Runa Lum",
+    "ruRU": "Руна Лум",
+    "zhCN": "卢姆符文"
+   },
+   "r15": {
+    "id": 20458,
+    "Key": "r15",
+    "enUS": "ÿc815ⅼ Hel Rune",
+    "zhTW": "符文：海爾",
+    "deDE": "[fs]Hel-Rune",
+    "esES": "Runa Hel",
+    "frFR": "[fs]Rune Hel",
+    "itIT": "[fs]Runa Hel",
+    "koKR": "헬 룬",
+    "plPL": "Runa Hel",
+    "esMX": "Runa Hel",
+    "jaJP": "ヘル・ルーン",
+    "ptBR": "Runa Hel",
+    "ruRU": "Руна Хел",
+    "zhCN": "海尔符文"
+   },
+   "r14": {
+    "id": 20459,
+    "Key": "r14",
+    "enUS": "ÿc814ⅻ Dol Rune",
+    "zhTW": "符文：多爾",
+    "deDE": "[fs]Dol-Rune",
+    "esES": "Runa Dol",
+    "frFR": "[fs]Rune Dol",
+    "itIT": "[fs]Runa Dol",
+    "koKR": "돌 룬",
+    "plPL": "Runa Dol",
+    "esMX": "Runa Dol",
+    "jaJP": "ドル・ルーン",
+    "ptBR": "Runa Dol",
+    "ruRU": "Руна Дол",
+    "zhCN": "多尔符文"
+   },
+   "r12": {
+    "id": 20461,
+    "Key": "r12",
+    "enUS": "ÿc812ⅹ Sol Rune",
+    "zhTW": "符文：索爾",
+    "deDE": "[fs]Sol-Rune",
+    "esES": "Runa Sol",
+    "frFR": "[fs]Rune Sol",
+    "itIT": "[fs]Runa Sol",
+    "koKR": "솔 룬",
+    "plPL": "Runa Sol",
+    "esMX": "Runa Sol",
+    "jaJP": "ソル・ルーン",
+    "ptBR": "Runa Sol",
+    "ruRU": "Руна Сол",
+    "zhCN": "索尔符文"
+   },
+   "r11": {
+    "id": 20462,
+    "Key": "r11",
+    "enUS": "ÿc811ⅸ Amn Rune",
+    "zhTW": "符文：安姆",
+    "deDE": "[fs]Amn-Rune",
+    "esES": "Runa Amn",
+    "frFR": "[fs]Rune Amn",
+    "itIT": "[fs]Runa Amn",
+    "koKR": "앰 룬",
+    "plPL": "Runa Amn",
+    "esMX": "Runa Amn",
+    "jaJP": "アムン・ルーン",
+    "ptBR": "Runa Amn",
+    "ruRU": "Руна Амн",
+    "zhCN": "安姆符文"
+   },
+   "r10": {
+    "id": 20463,
+    "Key": "r10",
+    "enUS": "ÿc810ⅷ Thul Rune",
+    "zhTW": "符文：書爾",
+    "deDE": "[fs]Thul-Rune",
+    "esES": "Runa Thul",
+    "frFR": "[fs]Rune Thul",
+    "itIT": "[fs]Runa Thul",
+    "koKR": "주울 룬",
+    "plPL": "Runa Thul",
+    "esMX": "Runa Thul",
+    "jaJP": "スル・ルーン",
+    "ptBR": "Runa Thul",
+    "ruRU": "Руна Тул",
+    "zhCN": "图尔符文"
+   },
+   "r09": {
+    "id": 20464,
+    "Key": "r09",
+    "enUS": "ÿc89ⅶ Ort Rune",
+    "zhTW": "符文：歐特",
+    "deDE": "[fs]Ort-Rune",
+    "esES": "Runa Ort",
+    "frFR": "[fs]Rune Ort",
+    "itIT": "[fs]Runa Ort",
+    "koKR": "오르트 룬",
+    "plPL": "Runa Ort",
+    "esMX": "Runa Ort",
+    "jaJP": "オルト・ルーン",
+    "ptBR": "Runa Ort",
+    "ruRU": "Руна Орт",
+    "zhCN": "欧特符文"
+   },
+   "r08": {
+    "id": 20465,
+    "Key": "r08",
+    "enUS": "ÿc88ⅵ Ral Rune",
+    "zhTW": "符文：拉爾",
+    "deDE": "[fs]Ral-Rune",
+    "esES": "Runa Ral",
+    "frFR": "[fs]Rune Ral",
+    "itIT": "[fs]Runa Ral",
+    "koKR": "랄 룬",
+    "plPL": "Runa Ral",
+    "esMX": "Runa Ral",
+    "jaJP": "ラル・ルーン",
+    "ptBR": "Runa Ral",
+    "ruRU": "Руна Рал",
+    "zhCN": "拉尔符文"
+   },
+   "r07": {
+    "id": 20466,
+    "Key": "r07",
+    "enUS": "ÿc87ⅴ Tal Rune",
+    "zhTW": "符文：塔爾",
+    "deDE": "[fs]Tal-Rune",
+    "esES": "Runa Tal",
+    "frFR": "[fs]Rune Tal",
+    "itIT": "[fs]Runa Tal",
+    "koKR": "탈 룬",
+    "plPL": "Runa Tal",
+    "esMX": "Runa Tal",
+    "jaJP": "タル・ルーン",
+    "ptBR": "Runa Tal",
+    "ruRU": "Руна Тал",
+    "zhCN": "塔尔符文"
+   },
+   "r06": {
+    "id": 20467,
+    "Key": "r06",
+    "enUS": "ÿc86ⅳ Ith Rune",
+    "zhTW": "符文：伊司",
+    "deDE": "[fs]Ith-Rune",
+    "esES": "Runa Ith",
+    "frFR": "[fs]Rune Ith",
+    "itIT": "[fs]Runa Ith",
+    "koKR": "아이드 룬",
+    "plPL": "Runa Ith",
+    "esMX": "Runa Ith",
+    "jaJP": "イス・ルーン",
+    "ptBR": "Runa Ith",
+    "ruRU": "Руна Ит",
+    "zhCN": "伊司符文"
+   },
+   "r05": {
+    "id": 20468,
+    "Key": "r05",
+    "enUS": "ÿc85ⅲ Eth Rune",
+    "zhTW": "符文：愛斯",
+    "deDE": "[fs]Eth-Rune",
+    "esES": "Runa Eth",
+    "frFR": "[fs]Rune Eth",
+    "itIT": "[fs]Runa Eth",
+    "koKR": "에드 룬",
+    "plPL": "Runa Eth",
+    "esMX": "Runa Eth",
+    "jaJP": "エス・ルーン",
+    "ptBR": "Runa Eth",
+    "ruRU": "Руна Эт",
+    "zhCN": "艾斯符文"
+   },
+   "r04": {
+    "id": 20469,
+    "Key": "r04",
+    "enUS": "ÿc84ⅱ Nef Rune",
+    "zhTW": "符文：那夫",
+    "deDE": "[fs]Nef-Rune",
+    "esES": "Runa Nef",
+    "frFR": "[fs]Rune Nef",
+    "itIT": "[fs]Runa Nef",
+    "koKR": "네프 룬",
+    "plPL": "Runa Nef",
+    "esMX": "Runa Nef",
+    "jaJP": "ネフ・ルーン",
+    "ptBR": "Runa Nef",
+    "ruRU": "Руна Неф",
+    "zhCN": "奈夫符文"
+   },
+   "r03": {
+    "id": 20470,
+    "Key": "r03",
+    "enUS": "ÿc83ⅰ Tir Rune",
+    "zhTW": "符文：特爾",
+    "deDE": "[fs]Tir-Rune",
+    "esES": "Runa Tir",
+    "frFR": "[fs]Rune Tir",
+    "itIT": "[fs]Runa Tir",
+    "koKR": "티르 룬",
+    "plPL": "Runa Tir",
+    "esMX": "Runa Tir",
+    "jaJP": "ティア・ルーン",
+    "ptBR": "Runa Tir",
+    "ruRU": "Руна Тир",
+    "zhCN": "提尔符文"
+   },
+   "r02": {
+    "id": 20471,
+    "Key": "r02",
+    "enUS": "ÿc82Ⅿ Eld Rune",
+    "zhTW": "符文：艾德",
+    "deDE": "[fs]Eld-Rune",
+    "esES": "Runa Eld",
+    "frFR": "[fs]Rune Eld",
+    "itIT": "[fs]Runa Eld",
+    "koKR": "엘드 룬",
+    "plPL": "Runa Eld",
+    "esMX": "Runa Eld",
+    "jaJP": "エルド・ルーン",
+    "ptBR": "Runa Eld",
+    "ruRU": "Руна Элд",
+    "zhCN": "艾德符文"
+   },
+   "r01": {
+    "id": 20472,
+    "Key": "r01",
+    "enUS": "ÿc81Ⅾ El Rune",
+    "zhTW": "符文：艾爾",
+    "deDE": "[fs]El-Rune",
+    "esES": "Runa El",
+    "frFR": "[fs]Rune El",
+    "itIT": "[fs]Runa El",
+    "koKR": "엘 룬",
+    "plPL": "Runa El",
+    "esMX": "Runa El",
+    "jaJP": "エル・ルーン",
+    "ptBR": "Runa El",
+    "ruRU": "Руна Эл",
+    "zhCN": "艾尔符文"
+   }
+  },
+  "item-nameaffixes.json": {
+   "Low Quality": {
+    "id": 1723,
+    "Key": "Low Quality",
+    "enUS": "ÿc6 ",
+    "zhTW": "劣等的",
+    "deDE": "[ms]schlechter[fs]schlechte[ns]schlechtes[pl]schlechte",
+    "esES": "de baja calidad",
+    "frFR": "de faible qualité",
+    "itIT": "di Bassa Qualità",
+    "koKR": "질 낮은",
+    "plPL": "Niskiej Jakości",
+    "esMX": "baja calidad",
+    "jaJP": "粗悪な",
+    "ptBR": "[fs]Ordinária[ms]Ordinário[fp]Ordinárias[ms]Ordinários",
+    "ruRU": "[ms]некачественный[fs]некачественная[ns]некачественное[pl]некачественные",
+    "zhCN": "劣质"
+   },
+   "Damaged": {
+    "id": 1724,
+    "Key": "Damaged",
+    "enUS": "ÿc6 ",
+    "zhTW": "損壞的",
+    "deDE": "[ms]beschädigter[fs]beschädigte[ns]beschädigtes[pl]beschädigte",
+    "esES": "[fs]dañada[ms]dañado[fp]dañadas[mp]dañados",
+    "frFR": "[ms]endommagé[fs]endommagée[mp]endommagés[fp]endommagées",
+    "itIT": "[fs]Danneggiata[ms]Danneggiato[fp]Danneggiate[mp]Danneggiati",
+    "koKR": "파손된",
+    "plPL": "[fs]Uszkodzona[ms]Uszkodzony[nl]Uszkodzone",
+    "esMX": "[ms]dañado[fs]dañada[mp]dañados[fp]dañadas",
+    "jaJP": "損傷した",
+    "ptBR": "[ms]Danificado[mp]Danificados[fs]Danificada[fp]Danificadas",
+    "ruRU": "[ms]поврежденный[fs]поврежденная[ns]поврежденное[pl]поврежденные",
+    "zhCN": "破损"
+   },
+   "Cracked": {
+    "id": 1725,
+    "Key": "Cracked",
+    "enUS": "ÿc6 ",
+    "zhTW": "破舊的",
+    "deDE": "[ms]rissiger[fs]rissige[ns]rissiges[pl]rissige",
+    "esES": "[fs]agrietada[ms]agrietado[fp]agrietadas[mp]agrietados",
+    "frFR": "[ms]craquelé[fs]craquelée[mp]craquelés[fp]craquelées",
+    "itIT": "[fs]Rotta[ms]Rotto[fp]Rotte[mp]Rotti",
+    "koKR": "손상된",
+    "plPL": "[fs]Pęknięta[ms]Pęknięty[nl]Pęknięte",
+    "esMX": "[ms]rajado[fs]rajada[mp]rajados[fp]rajadas",
+    "jaJP": "ひび割れた",
+    "ptBR": "[ms]Rachado[mp]Rachados[fs]Rachada[fp]Rachadas",
+    "ruRU": "[ms]треснувший[fs]треснувшая[ns]треснувшее[pl]треснувшие",
+    "zhCN": "裂纹"
+   },
+   "Hiquality": {
+    "id": 1727,
+    "Key": "Hiquality",
+    "enUS": "***",
+    "zhTW": "特等的",
+    "deDE": "[fs]gute[ms]guter[ns]gutes[pl]gute",
+    "esES": "[fs]superior[ms]superior[fp]superiores[mp]superiores",
+    "frFR": "[ms]supérieur[fs]supérieure[mp]supérieurs[fp]supérieures",
+    "itIT": "[fs]Superiore[ms]Superiore[fp]Superiori[mp]Superiori",
+    "koKR": "고급",
+    "plPL": "Dobrej Jakości",
+    "esMX": "[ms]superior[fs]superior[mp]superiores[fp]superiores",
+    "jaJP": "上質な",
+    "ptBR": "[ms]Superior[mp]Superiores[fs]Superior[fp]Superiores",
+    "ruRU": "[ms]превосходный[fs]превосходная[ns]превосходное[pl]превосходные",
+    "zhCN": "精良"
+   },
+   "gld": {
+    "id": 2215,
+    "Key": "gld",
+    "enUS": "G",
+    "zhTW": "金幣",
+    "deDE": "Gold",
+    "esES": "de oro",
+    "frFR": "or",
+    "itIT": "oro",
+    "koKR": "금화",
+    "plPL": "szt. złota",
+    "esMX": "Oro",
+    "jaJP": "ゴールド",
+    "ptBR": "Ouro",
+    "ruRU": "золотых",
+    "zhCN": "金币"
+   },
+   "gsb": {
+    "id": 2248,
+    "Key": "gsb",
+    "enUS": "ÿc3₃ Sapphire",
+    "zhTW": "藍寶石",
+    "deDE": "Saphir",
+    "esES": "Zafiro",
+    "frFR": "Saphir",
+    "itIT": "Zaffiro",
+    "koKR": "사파이어",
+    "plPL": "Szafir",
+    "esMX": "[ms]Zafiro",
+    "jaJP": "サファイア",
+    "ptBR": "Safira",
+    "ruRU": "[ms]Сапфир",
+    "zhCN": "蓝宝石"
+   },
+   "gsg": {
+    "id": 2254,
+    "Key": "gsg",
+    "enUS": "ÿc2₃ Emerald",
+    "zhTW": "綠寶石",
+    "deDE": "Smaragd",
+    "esES": "Esmeralda",
+    "frFR": "Émeraude",
+    "itIT": "Smeraldo",
+    "koKR": "에메랄드",
+    "plPL": "Szmaragd",
+    "esMX": "[fs]Esmeralda",
+    "jaJP": "エメラルド",
+    "ptBR": "Esmeralda",
+    "ruRU": "[ms]Изумруд",
+    "zhCN": "绿宝石"
+   },
+   "gsr": {
+    "id": 2258,
+    "Key": "gsr",
+    "enUS": "ÿc1₃ Ruby",
+    "zhTW": "紅寶石",
+    "deDE": "Rubin",
+    "esES": "Rubí",
+    "frFR": "Rubis",
+    "itIT": "Rubino",
+    "koKR": "루비",
+    "plPL": "Rubin",
+    "esMX": "[ms]Rubí",
+    "jaJP": "ルビー",
+    "ptBR": "Rubi",
+    "ruRU": "[ms]Рубин",
+    "zhCN": "红宝石"
+   },
+   "gsw": {
+    "id": 2263,
+    "Key": "gsw",
+    "enUS": "₃ Diamond",
+    "zhTW": "鑽石",
+    "deDE": "Diamant",
+    "esES": "Diamante",
+    "frFR": "Diamant",
+    "itIT": "Diamante",
+    "koKR": "다이아몬드",
+    "plPL": "Diament",
+    "esMX": "[ms]Diamante",
+    "jaJP": "ダイアモンド",
+    "ptBR": "Diamante",
+    "ruRU": "[ms]Алмаз",
+    "zhCN": "钻石"
+   },
+   "Skull": {
+    "id": 2287,
+    "Key": "Skull",
+    "enUS": "ÿc5₃ Skull",
+    "zhTW": "骷髏",
+    "deDE": "Schädel -",
+    "esES": "del cráneo",
+    "frFR": "du crâne",
+    "itIT": "del Teschio",
+    "koKR": "해골의",
+    "plPL": "[fs]Czaszkowa[ms]Czaszkowy[nl]Czaszkowe",
+    "esMX": "[ms]calavérico[fs]calavérica[mp]calavéricos[fp]calavéricas",
+    "jaJP": "頭骨の",
+    "ptBR": "[fs]Craniana[ms]Craniano[fp]Cranianas[mp]Cranianos",
+    "ruRU": "[ms]черепной[fs]черепная[ns]черепное[pl]черепные",
+    "zhCN": "颅骨"
+   },
+   "Crude": {
+    "id": 20910,
+    "Key": "Crude",
+    "enUS": "ÿc6 ",
+    "zhTW": "粗製的",
+    "deDE": "[ms]einfacher[fs]einfache[ns]einfaches[pl]einfache",
+    "esES": "[fs]basta[ms]basto[fp]bastas[mp]bastos",
+    "frFR": "[ms]primitif[mp]primitifs[fs]primitive[fp]primitives",
+    "itIT": "[ms]Grezzo[fs]Grezza[mp]Grezzi[fp]Grezze",
+    "koKR": "조잡한",
+    "plPL": "[fs]Prymitywna[ms]Prymitywny[nl]Prymitywne",
+    "esMX": "[ms]rústico[fs]rústica[mp]rústicos[fp]rústicas",
+    "jaJP": "粗雑な",
+    "ptBR": "[ms]Rústico[mp]Rústicos[fs]Rústica[fp]Rústicas",
+    "ruRU": "[ms]неотделанный[fs]неотделанная[ns]неотделанное[pl]неотделанные",
+    "zhCN": "粗制"
+   }
+  },
+  "item-modifiers.json": {
+   "ItemStats1i": {
+    "id": 3462,
+    "Key": "ItemStats1i",
+    "enUS": "Quantity: %d",
+    "zhTW": "數量：%d",
+    "deDE": "Anzahl: %d",
+    "esES": "Cantidad: %d",
+    "frFR": "Quantité : %d",
+    "itIT": "Quantità: %d",
+    "koKR": "수량: %d",
+    "plPL": "Liczba: %d",
+    "esMX": "Cantidad: %d",
+    "jaJP": "数量: %d",
+    "ptBR": "Quantidade: %d",
+    "ruRU": "Количество: %d шт.",
+    "zhCN": "数量: %d"
+   },
+   "ModStr3m": {
+    "id": 3537,
+    "Key": "ModStr3m",
+    "enUS": "%d%% Chance of Open Wounds",
+    "zhTW": "%d%% 機率造成開放傷口",
+    "deDE": "%d%% Chance auf offene Wunden",
+    "esES": "%d%% de probabilidad de sangrado",
+    "frFR": "%d%% de chances de blessures ouvertes",
+    "itIT": "Probabilità di aprire una ferita aumentata del %d%%",
+    "koKR": "상처 악화 확률 %d%%",
+    "plPL": "%d%% szansy na otwarcie rany",
+    "esMX": "%d%% de probabilidad de abrir heridas",
+    "jaJP": "出血状態を付与（%d%%の確率）",
+    "ptBR": "%d%% de chance de Feridas Abertas",
+    "ruRU": "Вероятность %d%% нанести открытую рану",
+    "zhCN": "%d%% 几率造成开创性伤口"
+   },
+   "ModStr3w": {
+    "id": 3545,
+    "Key": "ModStr3w",
+    "enUS": "%d%% Damage Taken Goes To Mana",
+    "zhTW": "轉化 %d%% 受損的生命為法力",
+    "deDE": "%d%% erlittenen Schadens geht auf Mana",
+    "esES": "Un %d%% del daño sufrido se recupera como maná",
+    "frFR": "%d%% des dégâts subis sont soustraits au mana",
+    "itIT": "Il %d%% dei danni subiti è sul mana",
+    "koKR": "받는 피해의 %d%%만큼 마나 회복",
+    "plPL": "%d%% otrzymanych obrażeń przechodzi na manę",
+    "esMX": "Transforma un %d%% del daño recibido en maná",
+    "jaJP": "受けたダメージの%d%%をマナに変換",
+    "ptBR": "%d%% do dano recebido transforma-se em mana",
+    "ruRU": "%d%% урона приходится на ману",
+    "zhCN": "%d%% 受到的伤害转换为法力"
+   },
+   "ModStr5c": {
+    "id": 3577,
+    "Key": "ModStr5c",
+    "enUS": "%d%% Chance of Crushing Blow",
+    "zhTW": "%d%% 機率造成粉碎打擊",
+    "deDE": "%d%% Chance auf vernichtenden Schlag",
+    "esES": "%d%% de probabilidad de ataque aplastante",
+    "frFR": "%d%% de chances de coups écrasants",
+    "itIT": "Probabilità di colpo frantumante aumentata del %d%%",
+    "koKR": "강타 확률 %d%%",
+    "plPL": "%d%% szansy na druzgocące uderzenie",
+    "esMX": "%d%% de probabilidad de golpe aplastante",
+    "jaJP": "クラッシング・ブロー（%d%%の確率）",
+    "ptBR": "%d%% de chance de Golpe Esmagador",
+    "ruRU": "Вероятность %d%% нанести сокрушительный удар",
+    "zhCN": "%d%% 几率粉碎打击"
+   },
+   "ModStr5g": {
+    "id": 3581,
+    "Key": "ModStr5g",
+    "enUS": "Fire Absorb %d%%",
+    "zhTW": "火焰吸收 %d%%",
+    "deDE": "Feuerabsorption %d%%",
+    "esES": "%d%% de absorción de fuego",
+    "frFR": "Absorption du Feu : %d%%",
+    "itIT": "Assorbimento del fuoco aumentato del %d%%",
+    "koKR": "화염 흡수 %d%%",
+    "plPL": "%d%% absorpcji ognia",
+    "esMX": "%d%% de absorción de fuego",
+    "jaJP": "火炎吸収（%d%%）",
+    "ptBR": "Absorve fogo em %d%%",
+    "ruRU": "Поглощает %d%% урона от огня",
+    "zhCN": "火焰吸收 %d%%"
+   },
+   "ModStr5i": {
+    "id": 3583,
+    "Key": "ModStr5i",
+    "enUS": "Lightning Absorb %d%%",
+    "zhTW": "電擊吸收 %d%%",
+    "deDE": "Blitzabsorption %d%%",
+    "esES": "%d%% de absorción de rayos",
+    "frFR": "Absorption de la Foudre : %d%%",
+    "itIT": "Assorbimento del fulmine aumentato del %d%%",
+    "koKR": "번개 흡수 %d%%",
+    "plPL": "%d%% absorpcji błyskawic",
+    "esMX": "%d%% de absorción de rayo",
+    "jaJP": "電撃吸収（%d%%）",
+    "ptBR": "Absorve eletricidade em %d%%",
+    "ruRU": "Поглощает %d%% урона от молнии",
+    "zhCN": "闪电吸收 %d%%"
+   },
+   "ModStr5k": {
+    "id": 3585,
+    "Key": "ModStr5k",
+    "enUS": "Magic Absorb %d%%",
+    "zhTW": "魔法吸收 %d%%",
+    "deDE": "Magieabsorption %d%%",
+    "esES": "%d%% de absorción de magia",
+    "frFR": "Absorption de la Magie : %d%%",
+    "itIT": "Assorbimento della magia aumentato del %d%%",
+    "koKR": "마법 흡수 %d%%",
+    "plPL": "%d%% absorpcji magii",
+    "esMX": "%d%% de absorción de magia",
+    "jaJP": "魔法吸収（%d%%）",
+    "ptBR": "Absorve magia em %d%%",
+    "ruRU": "Поглощает %d%% магического урона",
+    "zhCN": "魔法伤害吸收 %d%%"
+   },
+   "ModStr5m": {
+    "id": 3587,
+    "Key": "ModStr5m",
+    "enUS": "Cold Absorb %d%%",
+    "zhTW": "冰寒吸收 %d%%",
+    "deDE": "Kälteabsorption %d%%",
+    "esES": "%d%% de absorción de frío",
+    "frFR": "Absorption du Froid : %d%%",
+    "itIT": "Assorbimento del freddo aumentato del %d%%",
+    "koKR": "냉기 흡수 %d%%",
+    "plPL": "%d%% absorpcji zimna",
+    "esMX": "%d%% de absorción de frío",
+    "jaJP": "冷気吸収（%d%%）",
+    "ptBR": "Absorve gelo em %d%%",
+    "ruRU": "Поглощает %d%% урона от льда",
+    "zhCN": "冰霜伤害吸收 %d%%"
+   },
+   "ModStr5q": {
+    "id": 3591,
+    "Key": "ModStr5q",
+    "enUS": "%d%% Deadly Strike",
+    "zhTW": "%d%% 致命打擊",
+    "deDE": "%d%% Todesschlag",
+    "esES": "%d%% de azote mortal",
+    "frFR": "%d%% de coups mortels",
+    "itIT": "Probabilità di colpo mortale aumentata del %d%%",
+    "koKR": "치명적 공격 %d%%",
+    "plPL": "%d%% szansy na zabójcze uderzenie",
+    "esMX": "%d%% de golpe letal",
+    "jaJP": "デッドリー・ストライク（%d%%）",
+    "ptBR": "%d%% de Golpe Mortal",
+    "ruRU": "Вероятность %d%% нанести смертельный удар",
+    "zhCN": "%d%% 致死打击"
+   },
+   "ModStr6g": {
+    "id": 3607,
+    "Key": "ModStr6g",
+    "enUS": "Piercing Attack",
+    "zhTW": "穿刺攻擊",
+    "deDE": "Durchbohrender Angriff",
+    "esES": "Ataque perforador",
+    "frFR": "Attaque perforante",
+    "itIT": "Trapassa il bersaglio",
+    "koKR": "관통 공격",
+    "plPL": "Przeszywający atak",
+    "esMX": "Ataque perforante",
+    "jaJP": "貫通攻撃",
+    "ptBR": "Ataque perfurante",
+    "ruRU": "Пронзающая атака",
+    "zhCN": "穿刺攻击"
+   },
+   "ModStr3u": {
+    "id": 11034,
+    "Key": "ModStr3u",
+    "enUS": "Hit Causes Monster to Flee %d%%",
+    "zhTW": "擊中有 %d%% 機率使怪物逃跑",
+    "deDE": "Treffer schlägt Monster in die Flucht %d%%",
+    "esES": "%d%% de probabilidad de que los monstruos huyan al golpearlos",
+    "frFR": "Le monstre touché s’enfuit à %d%%",
+    "itIT": "Probabilità di far fuggire il bersaglio aumentata del %d%%",
+    "koKR": "적중 시 괴물 도주 %d%%",
+    "plPL": "%d%% szansy na zmuszenie potwora do ucieczki",
+    "esMX": "%d%% monstruo huye al ser golpeado",
+    "jaJP": "攻撃命中でモンスターが逃げ出す（%d%%の確率）",
+    "ptBR": "Acerto causa fuga do monstro %d%%",
+    "ruRU": "Вероятность %d%% обратить монстра в бегство при ударе",
+    "zhCN": "%d%% 几率命中使怪物逃跑"
+   },
+   "ModStr2uPercent": {
+    "id": 23001,
+    "Key": "ModStr2uPercent",
+    "enUS": "Damage Reduced by %d%%",
+    "zhTW": "傷害降低 %d%%",
+    "deDE": "Schaden reduziert um %d%%",
+    "esES": "Daño reducido un %d%%",
+    "frFR": "Dégâts réduits de %d%%",
+    "itIT": "Danni ridotti del %d%%",
+    "koKR": "피해 %d%% 감소",
+    "plPL": "Zmniejsza otrzymywane obrażenia o %d%%",
+    "esMX": "Reduce un %d%% el daño",
+    "jaJP": "ダメージを軽減（%d%%）",
+    "ptBR": "Dano reduzido em %d%%",
+    "ruRU": "Урон уменьшен на %d%%",
+    "zhCN": "伤害降低 %d%%"
+   },
+   "Transmod": {
+    "id": 26706,
+    "Key": "Transmod",
+    "enUS": "ÿc8%+d to Amazon Skill Levelsÿc3",
+    "zhTW": "%+d 亞馬遜技能等級",
+    "deDE": "%+d zu Amazonenfertigkeiten",
+    "esES": "%+d a los niveles de habilidad de la amazona",
+    "frFR": "%+d aux niv. de compétence de l’Amazone",
+    "itIT": "%+d alle abilità dell'Amazzone",
+    "koKR": "ÿc8변신 %+dÿc3",
+    "plPL": "%+d do umiejętności amazonki",
+    "esMX": "%+d a los niveles de habilidad de la Amazona",
+    "jaJP": "〈アマゾネス〉スキルレベル向上（%+d）",
+    "ptBR": "%+d de níveis de habilidade de Amazona",
+    "ruRU": "%+d к уровню умений амазонки",
+    "zhCN": "%+d 亚马逊技能等级"
+   }
+  }
+ }
+}

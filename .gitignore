@@ -1,0 +1,13 @@
+# runtime-extracted (from the user's own game) / generated
+manager/logoloop.webm
+manager/tristram.flac
+manager/favicon.ico
+manager/baselines/
+manager/staging/
+manager/backups_prepatch/
+manager/dist/
+manager/features.json
+manager/eqtool_state.json
+manager/eqtool_config.json
+manager/renames.log
+__pycache__/
