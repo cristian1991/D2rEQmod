@@ -429,6 +429,21 @@ def main():
             report["installed"].append(rel)
         print("installed {} merged files into live eq "
               "(backups in {})".format(len(report["installed"]), bdir))
+        try:
+            import casc
+            if casc.available():
+                st = casc.Storage()
+                ver = st.read(bytes(
+                    r"data:data\global\dataversionbuild.txt", "ascii"))
+                st.close()
+                if ver:
+                    vp = os.path.join(
+                        EQ_ROOT, "data", "global", "dataversionbuild.txt")
+                    open(vp, "wb").write(ver)
+                    print("data version stamp refreshed:",
+                          ver.decode("ascii", "replace").strip())
+        except Exception as e:
+            print("version stamp refresh failed:", e)
     with open(os.path.join(HERE, "doctor_report.json"), "w",
               encoding="utf-8") as f:
         json.dump(report, f, indent=1)

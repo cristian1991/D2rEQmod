@@ -31,6 +31,7 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "features.json")
 # forward-slash relative path lowercased)
 RULES = [
     ("core-modinfo",        "never",  r"^modinfo\.json$"),
+    ("core-modinfo",        "never",  r"^data/global/dataversionbuild\.txt$"),
     ("npc-glow",            "rename", r"^data/hd/nickname/"),
     ("npc-glow",            "rename", r"^data/hd/character/npc/"),
     ("floor-effects",       "rename", r"^data/hd/items/misc/(rune|gem|key|charm|quest|body_part)/"),
