@@ -29,7 +29,8 @@ def game_version():
     try:
         out = subprocess.run(
             ["powershell", "-NoProfile", "-Command", ps],
-            capture_output=True, text=True, timeout=30)
+            capture_output=True, text=True, timeout=30,
+            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
         return out.stdout.strip() or "unknown"
     except Exception:
         return "unknown"
@@ -50,7 +51,8 @@ def save_state(st):
 
 def rescan():
     subprocess.run([sys.executable, os.path.join(HERE, "scan_features.py")],
-                   capture_output=True, text=True)
+                   capture_output=True, text=True,
+                   creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
     with open(FEATURES, encoding="utf-8") as f:
         return json.load(f)
 

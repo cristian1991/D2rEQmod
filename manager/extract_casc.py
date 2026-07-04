@@ -24,7 +24,9 @@ WANT_PREFIXES = (
 def game_version():
     ps = "(Get-Item '{}').VersionInfo.FileVersion".format(GAME_EXE)
     out = subprocess.run(["powershell", "-NoProfile", "-Command", ps],
-                         capture_output=True, text=True, timeout=30)
+                         capture_output=True, text=True, timeout=30,
+                         creationflags=getattr(subprocess,
+                                               "CREATE_NO_WINDOW", 0))
     return (out.stdout.strip() or "unknown").replace(" ", "")
 
 

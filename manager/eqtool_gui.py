@@ -142,7 +142,9 @@ def mod_install(install):
         ).format(lnk=SHORTCUT, exe=eqtool.GAME_EXE, args=MOD_ARGS,
                  cwd=os.path.dirname(eqtool.GAME_EXE))
         subprocess.run(["powershell", "-NoProfile", "-Command", ps],
-                       capture_output=True, timeout=30)
+                       capture_output=True, timeout=30,
+                       creationflags=getattr(subprocess,
+                                             "CREATE_NO_WINDOW", 0))
         return "Desktop shortcut created: launches D2R with " + MOD_ARGS
     if os.path.isfile(SHORTCUT):
         os.remove(SHORTCUT)
@@ -1119,7 +1121,8 @@ class H(BaseHTTPRequestHandler):
             r = subprocess.run(
                 [sys.executable, os.path.join(HERE, "doctor.py"),
                  "--install"],
-                capture_output=True, text=True)
+                capture_output=True, text=True,
+                creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
             return self._send(r.stdout + r.stderr, "text/plain")
         return self._send("not found", "text/plain", 404)
 
@@ -1156,7 +1159,9 @@ def ensure_assets():
               "$fs.Close()").format(exe=eqtool.GAME_EXE, fav=fav)
         try:
             subprocess.run(["powershell", "-NoProfile", "-Command", ps],
-                           capture_output=True, timeout=30)
+                           capture_output=True, timeout=30,
+                           creationflags=getattr(subprocess,
+                                                 "CREATE_NO_WINDOW", 0))
         except Exception:
             pass
     # vanilla baseline for the update doctor
@@ -1165,7 +1170,9 @@ def ensure_assets():
             os.listdir(os.path.join(HERE, "baselines"))):
         try:
             subprocess.Popen([sys.executable,
-                              os.path.join(HERE, "extract_casc.py")])
+                              os.path.join(HERE, "extract_casc.py")],
+                             creationflags=getattr(subprocess,
+                                                   "CREATE_NO_WINDOW", 0))
         except Exception:
             pass
 
