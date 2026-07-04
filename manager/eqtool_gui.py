@@ -203,7 +203,7 @@ DESCRIPTIONS = {
     "ui-profiles": "UI profile geometry: centered orbs, side panels removed.",
     "ui-sprites": "Custom panel sprite art for HUD, inventory and waypoints.",
     "trav-wall-remove": "Travincal wall removal.",
-    "winged-crown": "Crown-family helms (incl. Crown of Ages) as Coif of Glory with blue ice-vfx wings.",
+    "crown-wings": "Crown item family (Crown / Grand Crown / Corona, incl. Crown of Ages) shown as Coif of Glory with blue ice-vfx wings.",
     "waypoint-lights": "Horadric waypoint light beams and automap markers.",
     "core-modinfo": "Mod bootstrap file. Cannot be disabled.",
 }
@@ -243,7 +243,7 @@ ICONS = {
     "ui-profiles": "⅑",        # gear
     "ui-sprites": "₃",         # frame
     "trav-wall-remove": "⅙",        # pickaxe
-    "winged-crown": "ⁿ",            # crown
+    "crown-wings": "ⁿ",             # crown
     "waypoint-lights": "Ⅻ",    # charm/portal
 }
 

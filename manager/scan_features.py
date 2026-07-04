@@ -42,7 +42,7 @@ RULES = [
     ("golden-cursor",       "rename", r"^data/hd/global/ui/cursor/"),
     ("trav-wall-remove",         "rename", r"^data/global/tiles/.*travn\.json$"),
     ("trav-wall-remove",         "rename", r"travn\.json$"),
-    ("winged-crown",        "rename", r"^data/hd/items/armor/helmet/crown\.json$"),
+    ("crown-wings",        "rename", r"^data/hd/items/armor/helmet/crown\.json$"),
     ("better-runes",        "rename", r"^data/hd/items/"),          # remaining item sprites
     ("hud-monster-health",  "rename", r"hudmonsterhealthhd\.json$"),
     ("pro-bars",            "rename", r"(hpprobar|healthprobar|manaprobar)hd\.json$"),
