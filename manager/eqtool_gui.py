@@ -98,6 +98,17 @@ SHORTCUT = os.path.join(os.path.expanduser("~"), "Desktop",
                         "Diablo II Resurrected - eq mod.lnk")
 
 
+def bnet_running():
+    try:
+        r = subprocess.run(
+            ["tasklist", "/FI", "IMAGENAME eq Battle.net.exe", "/FO", "CSV"],
+            capture_output=True, text=True, timeout=15,
+            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+        return "Battle.net.exe" in r.stdout
+    except Exception:
+        return False
+
+
 def mod_install_state():
     """installed = launch args persisted (Battle.net config if present,
     else desktop shortcut)."""
@@ -756,9 +767,21 @@ async function refreshInstall(){
   const r = await fetch("/api/modinstall");
   const d = await r.json();
   MOD_INSTALLED = d.installed;
-  document.getElementById("installBtn").textContent =
-    d.installed ? "Uninstall Mod" : "Install Mod";
+  const b = document.getElementById("installBtn");
+  b.textContent = d.installed ? "Uninstall Mod" : "Install Mod";
+  if (d.bnet_running) {
+    b.disabled = true;
+    b.classList.add("locked");
+    b.title = "Close Battle.net to " +
+      (d.installed ? "uninstall" : "install") +
+      " - it overwrites its settings on exit";
+  } else {
+    b.disabled = false;
+    b.classList.remove("locked");
+    b.title = "";
+  }
 }
+setInterval(refreshInstall, 15000);
 async function installMod(){
   const r = await fetch("/api/modinstall", {method:"POST",
     body: JSON.stringify({install: !MOD_INSTALLED})});
@@ -926,7 +949,8 @@ class H(BaseHTTPRequestHandler):
         if self.path == "/api/modinstall":
             mode, installed = mod_install_state()
             return self._send(json.dumps(
-                {"mode": mode, "installed": installed}))
+                {"mode": mode, "installed": installed,
+                 "bnet_running": mode == "bnet" and bnet_running()}))
         if self.path == "/api/features":
             data = eqtool.rescan()
             st = eqtool.load_state()
