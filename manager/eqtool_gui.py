@@ -646,6 +646,8 @@ body.nobg .bg-shade{display:none;}
 <div id="cornerCtrls">
   <button class="ctrl" id="sndBtn" onclick="toggleSound()" title="Tristram theme">Sound</button>
   <button class="ctrl" id="bgBtn" onclick="toggleBg()" title="Background video">BG</button>
+  <a class="ctrl" href="https://github.com/cristian1991/D2rEQmod"
+     target="_blank" title="Source, issues, updates">GitHub</a>
 </div>
 <audio id="bgmusic" loop preload="none" src="/music"></audio>
 
@@ -1160,7 +1162,20 @@ def main():
     ensure_assets()
     srv = ThreadingHTTPServer(("127.0.0.1", PORT), H)
     url = "http://127.0.0.1:{}".format(PORT)
-    threading.Timer(0.4, webbrowser.open, [url]).start()
+
+    def open_ui():
+        # Edge app mode = chromeless native-feeling window; fall back
+        # to the default browser tab
+        for edge in (
+            r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+            r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+        ):
+            if os.path.isfile(edge):
+                subprocess.Popen([edge, "--app=" + url])
+                return
+        webbrowser.open(url)
+
+    threading.Timer(0.4, open_ui).start()
     print("eqtool GUI at {} (Ctrl+C to stop)".format(url))
     try:
         srv.serve_forever()
