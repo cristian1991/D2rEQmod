@@ -24,6 +24,7 @@ import patches  # noqa: E402  (key-group patch toggles for shared files)
 import layouts  # noqa: E402  (layout-node patch toggles)
 
 PORT = 8137
+MOD_VERSION = "1.0.0"
 SHOTS = os.path.join(HERE, "screenshots")
 
 # variant option: one live file swapped between two shipped versions
@@ -528,6 +529,14 @@ body.nobg .bg-shade{display:none;}
  box-shadow:inset 0 0 12px rgba(0,0,0,.6);text-shadow:0 1px 1px #000;}
 .ctrl:hover{color:#e0be73;border-color:#6a6a72;}
 .ctrl.on{color:#e0be73;border-color:rgba(224,190,115,.5);}
+#ghLink{position:fixed;left:22px;bottom:4px;z-index:2;
+ font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.14em;
+ font-size:.78rem;color:var(--muted);text-decoration:none;
+ text-shadow:0 1px 2px #000;}
+#ghLink:hover{color:var(--gold-bright);}
+#modVer{position:fixed;right:22px;bottom:22px;z-index:2;
+ font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.18em;
+ font-size:.78rem;color:var(--muted);text-shadow:0 1px 2px #000;}
 #gameVer{position:fixed;right:22px;bottom:4px;z-index:2;
  font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.18em;
  font-size:.78rem;color:var(--muted);text-shadow:0 1px 2px #000;}
@@ -643,11 +652,12 @@ body.nobg .bg-shade{display:none;}
 <div id="lightbox" onclick="this.style.display='none'"><img /></div>
 <div id="toast"></div>
 <div id="gameVer"></div>
+<div id="modVer"></div>
+<a id="ghLink" href="https://github.com/cristian1991/D2rEQmod"
+   target="_blank">github.com/cristian1991/D2rEQmod</a>
 <div id="cornerCtrls">
   <button class="ctrl" id="sndBtn" onclick="toggleSound()" title="Tristram theme">Sound</button>
   <button class="ctrl" id="bgBtn" onclick="toggleBg()" title="Background video">BG</button>
-  <a class="ctrl" href="https://github.com/cristian1991/D2rEQmod"
-     target="_blank" title="Source, issues, updates">GitHub</a>
 </div>
 <audio id="bgmusic" loop preload="none" src="/music"></audio>
 
@@ -658,6 +668,8 @@ async function refresh(keep) {
   const r = await fetch("/api/features");
   DATA = await r.json();
   document.getElementById("gameVer").textContent = "game " + DATA.version;
+  document.getElementById("modVer").textContent =
+    "eq mod " + (DATA.mod_version || "");
   const w = document.getElementById("updWarn");
   if (DATA.updated) {
     w.style.display = "block";
@@ -1016,6 +1028,7 @@ class H(BaseHTTPRequestHandler):
             feats.sort(key=lambda f: f["name"])
             return self._send(json.dumps({
                 "version": ver, "updated": updated,
+                "mod_version": MOD_VERSION,
                 "count": sum(len(v) for v in data["features"].values()),
                 "features": feats}))
         return self._send("not found", "text/plain", 404)
