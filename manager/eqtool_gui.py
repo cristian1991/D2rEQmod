@@ -24,12 +24,22 @@ import patches  # noqa: E402  (key-group patch toggles for shared files)
 import layouts  # noqa: E402  (layout-node patch toggles)
 
 PORT = 8137
-MOD_VERSION = "1.0.0"
+MOD_VERSION = "1.1.0"
 SHOTS = os.path.join(HERE, "screenshots")
 
 # variant option: one live file swapped between two shipped versions
 # (ON = variant file, OFF = default file). Experimental transplants.
-VARIANTS = {}  # superseded by layout-node groups (see layouts.py)
+VARIANTS = {
+    "coa-crown-float": {
+        "live": os.path.join(eqtool.EQ_ROOT, "data", "hd", "items",
+                             "armor", "circlet", "eq_coa.json"),
+        "on": "eq_coa.float.json",
+        "off": "eq_coa.seated.json",
+        "desc": "Crown of Ages: floating crown hovers above the head "
+                "(ON) or sits on it like a worn crown (OFF).",
+        "label": "data/hd/items/armor/circlet/eq_coa.json  (variant swap)",
+    },
+}
 VARIANT_DIR = os.path.join(HERE, "patches", "variants")
 
 
@@ -203,7 +213,7 @@ DESCRIPTIONS = {
     "ui-profiles": "UI profile geometry: centered orbs, side panels removed.",
     "ui-sprites": "Custom panel sprite art for HUD, inventory and waypoints.",
     "trav-wall-remove": "Travincal wall removal.",
-    "crown-wings": "Crown item family (Crown / Grand Crown / Corona, incl. Crown of Ages) shown as Coif of Glory with blue ice-vfx wings.",
+    "coa-crown": "Crown of Ages only: custom open-top golden crown (own 3D model + texture). Regular crowns and diadems stay vanilla.",
     "waypoint-lights": "Horadric waypoint light beams and automap markers.",
     "core-modinfo": "Mod bootstrap file. Cannot be disabled.",
 }
@@ -243,7 +253,7 @@ ICONS = {
     "ui-profiles": "⅑",        # gear
     "ui-sprites": "₃",         # frame
     "trav-wall-remove": "⅙",        # pickaxe
-    "crown-wings": "ⁿ",             # crown
+    "coa-crown": "ⁿ",             # crown
     "waypoint-lights": "Ⅻ",    # charm/portal
 }
 
@@ -1015,9 +1025,8 @@ class H(BaseHTTPRequestHandler):
                     "desc": vspec["desc"],
                     "shot_on": shot(vname, "_on"),
                     "shot_off": shot(vname, "_off"),
-                    "files": [{"path": "data/global/ui/layouts/"
-                               "hudmonsterhealthhd.json  (variant swap)",
-                               "bk": False}],
+                    "files": [{"path": vspec.get(
+                        "label", "(variant swap)"), "bk": False}],
                 })
             for cname, spec in COMPOSITES.items():
                 states, cfiles, mb = [], [], 0.0

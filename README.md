@@ -45,7 +45,7 @@ the game, done. No reinstalling, no file juggling, no guesswork.
 | monster-topbar | Custom top-of-screen monster health bar |
 | overhead-healthbars | EXPERIMENTAL: console-style bars above monsters on PC |
 | drop-effects | Floor/drop effects for runes, gems, keys, charms |
-| better-runes, golden-cursor, waypoint-lights, trav-wall-remove, main-menu-layout, intro-videos, winged-crown | what it says on the tin |
+| better-runes, golden-cursor, waypoint-lights, trav-wall-remove, main-menu-layout, intro-videos, coa-crown | what it says on the tin |
 
 ## Install
 
