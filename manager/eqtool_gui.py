@@ -1423,14 +1423,28 @@ def main():
 
     def open_ui():
         # Edge app mode = chromeless native-feeling window; fall back
-        # to the default browser tab
+        # to the default browser tab. App windows ignore
+        # --start-maximized, so size the window to the work area.
+        try:
+            import ctypes
+            import ctypes.wintypes
+            rect = ctypes.wintypes.RECT()
+            ctypes.windll.user32.SystemParametersInfoW(
+                0x0030, 0, ctypes.byref(rect), 0)   # SPI_GETWORKAREA
+            w = rect.right - rect.left
+            h = rect.bottom - rect.top
+            pos = (rect.left, rect.top)
+        except Exception:
+            w, h, pos = 1600, 900, (0, 0)
         for edge in (
             r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
             r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
         ):
             if os.path.isfile(edge):
-                subprocess.Popen([edge, "--app=" + url,
-                                  "--start-maximized"])
+                subprocess.Popen([
+                    edge, "--app=" + url,
+                    "--window-position=%d,%d" % pos,
+                    "--window-size=%d,%d" % (w, h)])
                 return
         webbrowser.open(url)
 
