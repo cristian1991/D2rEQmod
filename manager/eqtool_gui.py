@@ -1441,8 +1441,16 @@ def main():
             r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
         ):
             if os.path.isfile(edge):
+                # dedicated profile => own browser process; without it,
+                # a running Edge adopts the window and ignores size flags
+                prof = os.path.join(
+                    os.environ.get("LOCALAPPDATA", HERE),
+                    "eqtool", "edge-app-profile")
+                os.makedirs(prof, exist_ok=True)
                 subprocess.Popen([
                     edge, "--app=" + url,
+                    "--user-data-dir=" + prof,
+                    "--no-first-run", "--no-default-browser-check",
                     "--window-position=%d,%d" % pos,
                     "--window-size=%d,%d" % (w, h)])
                 return
