@@ -38,15 +38,27 @@ VARIANTS = {
         "desc": "Crown of Ages: floating crown hovers above the head "
                 "(ON) or sits on it like a worn crown (OFF).",
         "label": "data/hd/items/armor/circlet/eq_coa.json  (variant swap)",
+        "parent": "coa-crown",
+        "title": "Floating crown",
     },
 }
 VARIANT_DIR = os.path.join(HERE, "patches", "variants")
 
 
+def _variant_live(v):
+    # the parent feature may have the file parked as .bk while disabled;
+    # the variant swap still applies so the choice survives re-enabling
+    if os.path.isfile(v["live"]):
+        return v["live"]
+    if os.path.isfile(v["live"] + ".bk"):
+        return v["live"] + ".bk"
+    return v["live"]
+
+
 def variant_state(name):
     v = VARIANTS[name]
     try:
-        live = open(v["live"], "rb").read()
+        live = open(_variant_live(v), "rb").read()
         on = open(os.path.join(VARIANT_DIR, v["on"]), "rb").read()
         return "ON" if live == on else "OFF"
     except OSError:
@@ -57,7 +69,7 @@ def variant_set(name, enable):
     v = VARIANTS[name]
     src = os.path.join(VARIANT_DIR, v["on" if enable else "off"])
     import shutil
-    shutil.copy(src, v["live"])
+    shutil.copy(src, _variant_live(v))
 
 
 # composite option: one switch driving several underlying features
@@ -552,17 +564,19 @@ body.nobg .bg-shade{display:none;}
  box-shadow:inset 0 0 12px rgba(0,0,0,.6);text-shadow:0 1px 1px #000;}
 .ctrl:hover{color:#e0be73;border-color:#6a6a72;}
 .ctrl.on{color:#e0be73;border-color:rgba(224,190,115,.5);}
-#ghLink{position:fixed;left:22px;bottom:4px;z-index:2;
+#ghLink{position:fixed;left:22px;bottom:8px;z-index:2;
+ display:flex;align-items:center;gap:8px;
  font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.14em;
- font-size:.78rem;color:var(--muted);text-decoration:none;
+ font-size:.95rem;color:var(--muted);text-decoration:none;
  text-shadow:0 1px 2px #000;}
+#ghLink svg{width:19px;height:19px;fill:currentColor;filter:drop-shadow(0 1px 2px #000);}
 #ghLink:hover{color:var(--gold-bright);}
-#modVer{position:fixed;right:22px;bottom:22px;z-index:2;
+#modVer{position:fixed;right:22px;bottom:28px;z-index:2;
  font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.18em;
- font-size:.78rem;color:var(--muted);text-shadow:0 1px 2px #000;}
-#gameVer{position:fixed;right:22px;bottom:4px;z-index:2;
+ font-size:.95rem;color:var(--muted);text-shadow:0 1px 2px #000;}
+#gameVer{position:fixed;right:22px;bottom:6px;z-index:2;
  font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.18em;
- font-size:.78rem;color:var(--muted);text-shadow:0 1px 2px #000;}
+ font-size:.95rem;color:var(--muted);text-shadow:0 1px 2px #000;}
 #toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);z-index:8;
  background:#17100b;border:1px solid rgba(224,190,115,.55);color:var(--text);
  padding:12px 22px;font-family:var(--font-small);font-size:.85rem;display:none;
@@ -625,6 +639,7 @@ body.nobg .bg-shade{display:none;}
           </div>
         </div>
       </div>
+      <div id="variantBox" style="display:none;margin:10px 0 0;"></div>
 
       <div class="main-stack">
         <div class="panel-grid">
@@ -677,7 +692,7 @@ body.nobg .bg-shade{display:none;}
 <div id="gameVer"></div>
 <div id="modVer"></div>
 <a id="ghLink" href="https://github.com/cristian1991/D2rEQmod"
-   target="_blank">github.com/cristian1991/D2rEQmod</a>
+   target="_blank"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GitHub &mdash; D2rEQmod</a>
 <div id="cornerCtrls">
   <button class="ctrl" id="sndBtn" onclick="toggleSound()" title="Tristram theme">Sound</button>
   <button class="ctrl" id="bgBtn" onclick="toggleBg()" title="Background video">BG</button>
@@ -736,6 +751,20 @@ function render() {
   btn.disabled = !!f.locked;
   btn.textContent = f.locked ? "Protected" :
     (f.state === "ON" ? "Enabled" : "Disabled");
+
+  const vb = document.getElementById("variantBox");
+  if (f.variants && f.variants.length) {
+    vb.style.display = "block";
+    vb.innerHTML = f.variants.map(v => `
+      <div style="display:flex;align-items:center;gap:12px;padding:8px 14px;
+                  border:1px solid rgba(198,161,90,.35);background:rgba(0,0,0,.25);">
+        <span style="font-family:var(--font-head);letter-spacing:.06em;">${v.title}</span>
+        <button class="game-btn secondary" style="margin-left:auto;min-width:110px;"
+          ${f.state==="OFF"?"disabled title='Enable "+f.name.replace(/-/g," ")+" first'":""}
+          onclick="toggleVariant('${v.name}', ${v.state!=="ON"})">${v.state==="ON"?"ON":"OFF"}</button>
+      </div>
+      <div style="font-size:.82rem;opacity:.75;margin:4px 2px 0;">${v.desc}</div>`).join("");
+  } else { vb.style.display = "none"; vb.innerHTML = ""; }
 
   document.getElementById("fileN").textContent = f.files.length;
   document.getElementById("filesBtn").textContent =
@@ -821,6 +850,17 @@ async function toggleSelected() {
     body: JSON.stringify({feature: f.name, enable: en})});
   if (r.ok) {
     toast(f.name.replace(/-/g, " ") + (en ? " enabled" : " disabled")
+      + " — restart the game to apply.", 5000);
+  } else {
+    toast("Something went wrong: " + await r.text(), 7000);
+  }
+  refresh(true);
+}
+async function toggleVariant(name, en) {
+  const r = await fetch("/api/toggle", {method:"POST",
+    body: JSON.stringify({feature: name, enable: en})});
+  if (r.ok) {
+    toast(name.replace(/-/g, " ") + (en ? " on" : " off")
       + " — restart the game to apply.", 5000);
   } else {
     toast("Something went wrong: " + await r.text(), 7000);
@@ -1018,6 +1058,8 @@ class H(BaseHTTPRequestHandler):
                     "files": gfiles,
                 })
             for vname, vspec in VARIANTS.items():
+                if "parent" in vspec:
+                    continue        # attached to the parent card below
                 feats.append({
                     "name": vname, "icon": ICONS.get(vname, ""),
                     "state": variant_state(vname), "mb": 0.0,
@@ -1059,6 +1101,20 @@ class H(BaseHTTPRequestHandler):
                     "shot_on": shot(cname, "_on"),
                     "shot_off": shot(cname, "_off"),
                     "files": cfiles,
+                })
+            # nest parented variants inside their parent option card
+            for vname, vspec in VARIANTS.items():
+                parent = vspec.get("parent")
+                if not parent:
+                    continue
+                pf = next((f for f in feats if f["name"] == parent), None)
+                if pf is None:
+                    continue
+                pf.setdefault("variants", []).append({
+                    "name": vname,
+                    "title": vspec.get("title", vname.replace("-", " ")),
+                    "state": variant_state(vname),
+                    "desc": vspec["desc"],
                 })
             feats.sort(key=lambda f: f["name"])
             return self._send(json.dumps({
