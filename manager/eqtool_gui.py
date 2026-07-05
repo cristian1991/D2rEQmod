@@ -40,6 +40,10 @@ VARIANTS = {
         "label": "data/hd/items/armor/circlet/eq_coa.json  (variant swap)",
         "parent": "coa-crown",
         "title": "Floating crown",
+        "on_label": "Floating above head",
+        "off_label": "Seated on head",
+        "view_on": "float",       # gallery view auto-selected per mode
+        "view_off": "seated",
     },
 }
 VARIANT_DIR = os.path.join(HERE, "patches", "variants")
@@ -564,6 +568,18 @@ body.nobg .bg-shade{display:none;}
  box-shadow:inset 0 0 12px rgba(0,0,0,.6);text-shadow:0 1px 1px #000;}
 .ctrl:hover{color:#e0be73;border-color:#6a6a72;}
 .ctrl.on{color:#e0be73;border-color:rgba(224,190,115,.5);}
+.variant-sel{background:#17100b;color:var(--text);border:1px solid rgba(198,161,90,.5);
+ font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.08em;
+ font-size:.92rem;padding:9px 12px;cursor:pointer;outline:none;}
+.variant-sel:hover{border-color:var(--gold-bright);color:var(--gold-bright);}
+.gallery-thumbs{display:flex;gap:8px;padding:8px 2px 0;flex-wrap:wrap;}
+.gal-thumb{position:relative;width:96px;height:58px;background-size:cover;background-position:center;
+ border:1px solid rgba(198,161,90,.35);cursor:pointer;filter:saturate(.75) brightness(.8);padding:0;}
+.gal-thumb.active{border-color:var(--gold-bright);filter:none;}
+.gal-thumb:hover{filter:none;}
+.gal-thumb span{position:absolute;left:0;right:0;bottom:0;font-size:.62rem;
+ font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.08em;
+ background:rgba(0,0,0,.65);color:var(--text);padding:1px 3px;text-align:center;}
 #ghLink{position:fixed;left:22px;bottom:8px;z-index:2;
  display:flex;align-items:center;gap:8px;
  font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.14em;
@@ -632,6 +648,8 @@ body.nobg .bg-shade{display:none;}
         </div>
         <div class="actions" style="flex-direction:column;align-items:flex-end;gap:6px;">
           <div style="display:flex;gap:12px;align-items:center;">
+            <select id="variantSel" class="variant-sel" style="display:none;"
+              onchange="variantChanged(this)"></select>
             <button class="game-btn hero-btn" id="filesBtn"
               onclick="toggleDrawer()">Files</button>
             <button class="game-btn hero-btn" id="toggleBtn"
@@ -639,7 +657,6 @@ body.nobg .bg-shade{display:none;}
           </div>
         </div>
       </div>
-      <div id="variantBox" style="display:none;margin:10px 0 0;"></div>
 
       <div class="main-stack">
         <div class="panel-grid">
@@ -664,6 +681,7 @@ body.nobg .bg-shade{display:none;}
                 </div>
                 <div class="single-shot" id="singleShot" onclick="zoomSingle()"></div>
               </div>
+              <div class="gallery-thumbs" id="galleryThumbs" style="display:none;"></div>
             </div>
           </article>
 
@@ -752,19 +770,15 @@ function render() {
   btn.textContent = f.locked ? "Protected" :
     (f.state === "ON" ? "Enabled" : "Disabled");
 
-  const vb = document.getElementById("variantBox");
+  const vs = document.getElementById("variantSel");
   if (f.variants && f.variants.length) {
-    vb.style.display = "block";
-    vb.innerHTML = f.variants.map(v => `
-      <div style="display:flex;align-items:center;gap:12px;padding:8px 14px;
-                  border:1px solid rgba(198,161,90,.35);background:rgba(0,0,0,.25);">
-        <span style="font-family:var(--font-head);letter-spacing:.06em;">${v.title}</span>
-        <button class="game-btn secondary" style="margin-left:auto;min-width:110px;"
-          ${f.state==="OFF"?"disabled title='Enable "+f.name.replace(/-/g," ")+" first'":""}
-          onclick="toggleVariant('${v.name}', ${v.state!=="ON"})">${v.state==="ON"?"ON":"OFF"}</button>
-      </div>
-      <div style="font-size:.82rem;opacity:.75;margin:4px 2px 0;">${v.desc}</div>`).join("");
-  } else { vb.style.display = "none"; vb.innerHTML = ""; }
+    const v = f.variants[0];
+    vs.style.display = "";
+    vs.innerHTML = `<option value="off" ${v.state!=="ON"?"selected":""}>${v.off_label}</option>` +
+                   `<option value="on" ${v.state==="ON"?"selected":""}>${v.on_label}</option>`;
+    vs.dataset.variant = v.name;
+    vs.title = v.desc;
+  } else { vs.style.display = "none"; vs.innerHTML = ""; }
 
   document.getElementById("fileN").textContent = f.files.length;
   document.getElementById("filesBtn").textContent =
@@ -776,28 +790,62 @@ function render() {
   renderPreview(f);
 }
 
-function renderPreview(f) {
+let currentView = 0;
+
+function preferredView(f) {
+  // active variant mode picks its matching gallery view automatically
+  if (f.variants && f.variants.length && f.views && f.views.length) {
+    const v = f.variants[0];
+    const want = v.state === "ON" ? v.view_on : v.view_off;
+    if (want) {
+      const i = f.views.findIndex(x => x.key === want);
+      if (i >= 0) return i;
+    }
+  }
+  return Math.min(currentView, (f.views ? f.views.length : 1) - 1);
+}
+
+function renderPreview(f, keepView) {
   const comp = document.getElementById("comparison");
   const single = document.getElementById("singleShot");
   const ph = document.getElementById("placeholderArt");
+  const thumbs = document.getElementById("galleryThumbs");
   comp.classList.remove("show"); single.classList.remove("show");
-  ph.style.display = "none";
+  ph.style.display = "none"; thumbs.style.display = "none";
+  thumbs.innerHTML = "";
 
-  if (f.shot_on && f.shot_off) {
-    comp.classList.add("show");
-    document.getElementById("shotOn").style.backgroundImage = "url('" + f.shot_on + "')";
-    document.getElementById("shotOff").style.backgroundImage = "url('" + f.shot_off + "')";
-    comp.style.setProperty("--split", "50%");
-    document.getElementById("compareRange").value = 50;
-  } else if (f.shot_on || f.shot_off) {
-    single.classList.add("show");
-    single.style.backgroundImage = "url('" + (f.shot_on || f.shot_off) + "')";
-  } else {
+  const views = f.views || [];
+  if (!views.length) {
     ph.style.display = "grid";
     document.getElementById("phTitle").textContent = f.name.replace(/-/g, " ");
     document.getElementById("phText").textContent = f.desc +
       (f.name === "intro-videos" ? "" :
        " — add screenshots to see the change here.");
+    return;
+  }
+  if (!keepView) currentView = preferredView(f);
+  const v = views[currentView];
+  if (v.on && v.off) {
+    comp.classList.add("show");
+    document.getElementById("shotOn").style.backgroundImage = "url('" + v.on + "')";
+    document.getElementById("shotOff").style.backgroundImage = "url('" + v.off + "')";
+    comp.style.setProperty("--split", "50%");
+    document.getElementById("compareRange").value = 50;
+  } else {
+    const img = v.single || v.on || v.off;
+    single.classList.add("show");
+    single.style.backgroundImage = "url('" + img + "')";
+  }
+  if (views.length > 1) {
+    thumbs.style.display = "flex";
+    thumbs.innerHTML = views.map((x, i) => `
+      <button class="gal-thumb ${i===currentView?"active":""}" data-i="${i}"
+        style="background-image:url('${x.on||x.single||x.off}')">
+        <span>${x.label}</span></button>`).join("");
+    [...thumbs.querySelectorAll(".gal-thumb")].forEach(b =>
+      b.addEventListener("click", () => {
+        currentView = +b.dataset.i; renderPreview(f, true);
+      }));
   }
 }
 
@@ -856,12 +904,14 @@ async function toggleSelected() {
   }
   refresh(true);
 }
-async function toggleVariant(name, en) {
+async function variantChanged(sel) {
+  const en = sel.value === "on";
   const r = await fetch("/api/toggle", {method:"POST",
-    body: JSON.stringify({feature: name, enable: en})});
+    body: JSON.stringify({feature: sel.dataset.variant, enable: en})});
   if (r.ok) {
-    toast(name.replace(/-/g, " ") + (en ? " on" : " off")
-      + " — restart the game to apply.", 5000);
+    toast(sel.options[sel.selectedIndex].text +
+      (selected.state === "ON" ? " — restart the game to apply." :
+       " — will apply when the option is enabled."), 5000);
   } else {
     toast("Something went wrong: " + await r.text(), 7000);
   }
@@ -931,6 +981,42 @@ def shot(feat, suffix):
         if os.path.isfile(p):
             return "/shots/" + feat + suffix + ext
     return None
+
+
+def gallery(feat):
+    """Screenshot views for a feature.
+
+    File naming in screenshots/:
+      <feat>_on.png + <feat>_off.png          -> view 'overview' (slider)
+      <feat>_<view>_on.png + ..._off.png      -> named view (slider)
+      <feat>_<view>.png                       -> named view (single shot)
+    """
+    exts = (".png", ".jpg", ".jpeg", ".webp")
+    groups = {}
+    try:
+        files = os.listdir(SHOTS)
+    except OSError:
+        files = []
+    for fn in files:
+        stem, ext = os.path.splitext(fn)
+        if ext.lower() not in exts or not stem.startswith(feat + "_"):
+            continue
+        rest = stem[len(feat) + 1:]
+        if rest in ("on", "off"):
+            view, kind = "overview", rest
+        elif rest.endswith("_on") or rest.endswith("_off"):
+            view, kind = rest.rsplit("_", 1)
+        else:
+            view, kind = rest, "single"
+        groups.setdefault(view, {})[kind] = "/shots/" + fn
+    out = []
+    for view in sorted(groups, key=lambda v: (v != "overview", v)):
+        g = groups[view]
+        out.append({"label": view.replace("-", " "),
+                    "key": view,
+                    "on": g.get("on"), "off": g.get("off"),
+                    "single": g.get("single")})
+    return out
 
 
 class H(BaseHTTPRequestHandler):
@@ -1030,6 +1116,7 @@ class H(BaseHTTPRequestHandler):
                     "desc": DESCRIPTIONS.get(name, ""),
                     "shot_on": shot(name, "_on"),
                     "shot_off": shot(name, "_off"),
+                    "views": gallery(name),
                     "files": [{"path": r["path"], "bk": r["disabled"]}
                               for r in rows],
                 })
@@ -1055,6 +1142,7 @@ class H(BaseHTTPRequestHandler):
                     "desc": DESCRIPTIONS.get(gname, spec["desc"]),
                     "shot_on": shot(gname, "_on"),
                     "shot_off": shot(gname, "_off"),
+                    "views": gallery(gname),
                     "files": gfiles,
                 })
             for vname, vspec in VARIANTS.items():
@@ -1067,6 +1155,7 @@ class H(BaseHTTPRequestHandler):
                     "desc": vspec["desc"],
                     "shot_on": shot(vname, "_on"),
                     "shot_off": shot(vname, "_off"),
+                    "views": gallery(vname),
                     "files": [{"path": vspec.get(
                         "label", "(variant swap)"), "bk": False}],
                 })
@@ -1100,6 +1189,7 @@ class H(BaseHTTPRequestHandler):
                     "desc": DESCRIPTIONS.get(cname, ""),
                     "shot_on": shot(cname, "_on"),
                     "shot_off": shot(cname, "_off"),
+                    "views": gallery(cname),
                     "files": cfiles,
                 })
             # nest parented variants inside their parent option card
@@ -1115,6 +1205,10 @@ class H(BaseHTTPRequestHandler):
                     "title": vspec.get("title", vname.replace("-", " ")),
                     "state": variant_state(vname),
                     "desc": vspec["desc"],
+                    "on_label": vspec.get("on_label", "On"),
+                    "off_label": vspec.get("off_label", "Off"),
+                    "view_on": vspec.get("view_on"),
+                    "view_off": vspec.get("view_off"),
                 })
             feats.sort(key=lambda f: f["name"])
             return self._send(json.dumps({
