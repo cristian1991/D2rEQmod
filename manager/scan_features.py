@@ -48,6 +48,7 @@ RULES = [
     ("coa-crown",        "rename", r"^data/hd/items/armor/circlet/diadem/armor_eqcoa1_alb\.texture$"),
     ("coa-crown",        "rename", r"^data/hd/items/armor/helmet/crown/textures/crown_eqfl_alb\.texture$"),
     ("coa-crown",        "rename", r"^data/hd/texture_desc_cache\.json$"),
+    ("coa-crown",        "rename", r"^data/hd/global/ui/items/armor/circlet/eq_coa.*.sprite$"),
     ("better-runes",        "rename", r"^data/hd/items/"),          # remaining item sprites
     ("hud-monster-health",  "rename", r"hudmonsterhealthhd\.json$"),
     ("pro-bars",            "rename", r"(hpprobar|healthprobar|manaprobar)hd\.json$"),
