@@ -568,11 +568,19 @@ body.nobg .bg-shade{display:none;}
  box-shadow:inset 0 0 12px rgba(0,0,0,.6);text-shadow:0 1px 1px #000;}
 .ctrl:hover{color:#e0be73;border-color:#6a6a72;}
 .ctrl.on{color:#e0be73;border-color:rgba(224,190,115,.5);}
-.variant-sel{background:#17100b;color:var(--text);border:1px solid rgba(198,161,90,.5);
- font-family:var(--font-ui);font-variant:small-caps;letter-spacing:.08em;
- font-size:.92rem;padding:9px 12px;cursor:pointer;outline:none;}
-.variant-sel:hover{border-color:var(--gold-bright);color:var(--gold-bright);}
-.gallery-thumbs{display:flex;gap:8px;padding:8px 2px 0;flex-wrap:wrap;}
+.variant-sel{appearance:none;-webkit-appearance:none;
+ background:linear-gradient(180deg,#241a10,#150e08);color:var(--gold-bright);
+ border:1px solid rgba(198,161,90,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 2px 6px rgba(0,0,0,.5);
+ font-family:var(--font-head);letter-spacing:.06em;text-transform:uppercase;
+ font-size:.8rem;padding:11px 34px 11px 14px;cursor:pointer;outline:none;
+ background-image:linear-gradient(180deg,#241a10,#150e08),
+   url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%23c6a15a'/></svg>");
+ background-repeat:no-repeat,no-repeat;background-position:0 0,right 12px center;}
+.variant-sel:hover{border-color:var(--gold-bright);}
+.variant-sel option{background:#17100b;color:var(--text);
+ font-family:var(--font-ui);text-transform:none;font-size:.9rem;}
+.gallery-thumbs{position:absolute;left:10px;right:10px;bottom:10px;z-index:4;
+ display:flex;gap:8px;flex-wrap:wrap;justify-content:center;pointer-events:auto;}
 .gal-thumb{position:relative;width:96px;height:58px;background-size:cover;background-position:center;
  border:1px solid rgba(198,161,90,.35);cursor:pointer;filter:saturate(.75) brightness(.8);padding:0;}
 .gal-thumb.active{border-color:var(--gold-bright);filter:none;}
@@ -680,8 +688,8 @@ body.nobg .bg-shade{display:none;}
                          aria-label="Compare enabled and disabled screenshots" />
                 </div>
                 <div class="single-shot" id="singleShot" onclick="zoomSingle()"></div>
+                <div class="gallery-thumbs" id="galleryThumbs" style="display:none;"></div>
               </div>
-              <div class="gallery-thumbs" id="galleryThumbs" style="display:none;"></div>
             </div>
           </article>
 
@@ -752,6 +760,7 @@ function render() {
   [...list.querySelectorAll(".mod-tab")].forEach(b =>
     b.addEventListener("click", () => {
       selected = DATA.features.find(f => f.name === b.dataset.mod);
+      variantPick = null;
       compareMode = "compare"; render();
     }));
 
@@ -768,16 +777,21 @@ function render() {
     (f.locked ? " locked" : "");
   btn.disabled = !!f.locked;
   btn.textContent = f.locked ? "Protected" :
-    (f.state === "ON" ? "Enabled" : "Disabled");
+    (f.state === "ON" ? (variantDirty(f) ? "Apply Mode" : "Enabled")
+                      : "Disabled");
 
   const vs = document.getElementById("variantSel");
   if (f.variants && f.variants.length) {
     const v = f.variants[0];
+    const pick = variantPick !== null ? variantPick
+               : (v.state === "ON" ? "on" : "off");
+    const mark = s => (v.state === s ? "\u2726 " : "\u2002\u2002 ");
     vs.style.display = "";
-    vs.innerHTML = `<option value="off" ${v.state!=="ON"?"selected":""}>${v.off_label}</option>` +
-                   `<option value="on" ${v.state==="ON"?"selected":""}>${v.on_label}</option>`;
+    vs.innerHTML =
+      `<option value="off" ${pick==="off"?"selected":""}>${mark("OFF")}${v.off_label}</option>` +
+      `<option value="on" ${pick==="on"?"selected":""}>${mark("ON")}${v.on_label}</option>`;
     vs.dataset.variant = v.name;
-    vs.title = v.desc;
+    vs.title = v.desc + " \u2726 = currently active mode.";
   } else { vs.style.display = "none"; vs.innerHTML = ""; }
 
   document.getElementById("fileN").textContent = f.files.length;
@@ -796,7 +810,9 @@ function preferredView(f) {
   // active variant mode picks its matching gallery view automatically
   if (f.variants && f.variants.length && f.views && f.views.length) {
     const v = f.variants[0];
-    const want = v.state === "ON" ? v.view_on : v.view_off;
+    const mode = variantPick !== null ? variantPick
+               : (v.state === "ON" ? "on" : "off");
+    const want = mode === "on" ? v.view_on : v.view_off;
     if (want) {
       const i = f.views.findIndex(x => x.key === want);
       if (i >= 0) return i;
@@ -891,9 +907,24 @@ function zoomSingle(){
 document.getElementById("compareRange").addEventListener("input", e =>
   document.getElementById("comparison").style.setProperty("--split", e.target.value + "%"));
 
+function variantDirty(f) {
+  const v = f.variants && f.variants[0];
+  if (!v || variantPick === null) return false;
+  return (v.state === "ON") !== (variantPick === "on");
+}
+
 async function toggleSelected() {
   const f = selected;
+  if (f.state === "ON" && variantDirty(f)) {
+    // option stays on; just switch it to the selected mode
+    await applyVariantIfNeeded(f);
+    toast("Mode changed — restart the game to apply.", 5000);
+    variantPick = null;
+    refresh(true);
+    return;
+  }
   const en = f.state !== "ON";
+  if (en) await applyVariantIfNeeded(f);   // stage the chosen mode first
   const r = await fetch("/api/toggle", {method:"POST",
     body: JSON.stringify({feature: f.name, enable: en})});
   if (r.ok) {
@@ -902,20 +933,24 @@ async function toggleSelected() {
   } else {
     toast("Something went wrong: " + await r.text(), 7000);
   }
+  variantPick = null;
   refresh(true);
 }
-async function variantChanged(sel) {
-  const en = sel.value === "on";
+let variantPick = null;   // staged dropdown choice, applied on button press
+
+function variantChanged(sel) {
+  variantPick = sel.value;
+  render();   // updates the main button label + previewed gallery view
+}
+
+async function applyVariantIfNeeded(f) {
+  const v = f.variants && f.variants[0];
+  if (!v || variantPick === null) return false;
+  const want = variantPick === "on";
+  if ((v.state === "ON") === want) return false;
   const r = await fetch("/api/toggle", {method:"POST",
-    body: JSON.stringify({feature: sel.dataset.variant, enable: en})});
-  if (r.ok) {
-    toast(sel.options[sel.selectedIndex].text +
-      (selected.state === "ON" ? " — restart the game to apply." :
-       " — will apply when the option is enabled."), 5000);
-  } else {
-    toast("Something went wrong: " + await r.text(), 7000);
-  }
-  refresh(true);
+    body: JSON.stringify({feature: v.name, enable: want})});
+  return r.ok;
 }
 async function runDoctor() {
   toast("rescanning and running merge doctor...");
@@ -1394,7 +1429,8 @@ def main():
             r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
         ):
             if os.path.isfile(edge):
-                subprocess.Popen([edge, "--app=" + url])
+                subprocess.Popen([edge, "--app=" + url,
+                                  "--start-maximized"])
                 return
         webbrowser.open(url)
 
