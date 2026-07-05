@@ -45,7 +45,8 @@ the game, done. No reinstalling, no file juggling, no guesswork.
 | monster-topbar | Custom top-of-screen monster health bar |
 | overhead-healthbars | EXPERIMENTAL: console-style bars above monsters on PC |
 | drop-effects | Floor/drop effects for runes, gems, keys, charms |
-| better-runes, golden-cursor, waypoint-lights, trav-wall-remove, main-menu-layout, intro-videos, coa-crown | what it says on the tin |
+| coa-crown | Crown of Ages renders as a custom open-top golden crown - a unique 3D model + texture no other item shares. Companion switch **coa-crown-float**: hovers above the head or sits on it |
+| better-runes, golden-cursor, waypoint-lights, trav-wall-remove, main-menu-layout, intro-videos | what it says on the tin |
 
 ## Install
 
